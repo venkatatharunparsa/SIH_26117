@@ -1,0 +1,252 @@
+===== SIH2026_Guidelines page 19 =====
+GENERALGUIDLINES
+SIH 2026
+===== SIH2026_Guidelines page 20 =====
+MODE OF SIH GRAND FINALE
+Post Idea submission process, the ideas will be evaluated by experts.
+Evaluation criteria will include novelty of the idea, complexity, clarity and
+details in the prescribed format, feasibility, practicability, sustainability, scale
+of impact, user experience and potential for future work progression.
+13
+IDEA SELECTION CRITERIA
+SIH 2026 Grand Finale will be held offline at various nodal centers across pan
+India and teams have to travelled to their respective nodal centers.The Grand
+Finale of Smart India Hackathon (SIH) 2026 is proposed to be organized in
+December 2026
+SIH 2026
+===== SIH2026_Guidelines page 21 =====
+SIH 2026
+ MENTORS ELIGIBILITY 
+14
+For the SIH Grand Finale, after the teams are shortlisted, each team will
+have the option to select up to 2 mentors from industry or academia. A
+mentor is expected to possess relevant experience( 5 years)  in industry
+and/or academic domains to qualify.
+Each team, consisting of 6 student members, may include up to 2
+mentors in addition to the core student team. However, the
+participation of mentors along with the team is optional and entirely at
+the discretion of the team.
+===== SIH2026_Guidelines page 22 =====
+RESPONSIBILITIES OF MENTOR
+To mentor and guide teams via
+phone/video-chat or in person before
+the grand finale to help convert
+students' ideas into a working prototype
+To work collaboratively with the allotted
+student team during the SIH Grand
+Finale to build a working prototype
+The travel and accommodation of students and their mentors will be taken care by
+SIH2026 organizers. However, both mentor and students are eligible for same class of
+stay and travel
+To provide guidance and support to
+their allocated teams. Mentors along
+with participating students work
+together as a team during the grand
+finale
+Out-station travel to the hackathon
+venue may be necessary to participate
+in the Grand Finale
+SIH 2026
+15
+===== SIH2026_Guidelines page 23 =====
+SIH 2026
+GENERAL INFORMATION REGARDING THEGRAND FINALE
+16
+If a team is selected for the final Hackathon, members
+will need to travel to the assigned nodal center which
+can be anywhere in India
+No person—whether a faculty member, family member,
+friend, or anyone else—apart from the officially
+registered student team members and mentors will be
+allowed to participate in or stay at the hackathon venue.
+Additionally, no reimbursement claims from any such
+unregistered individuals will be entertained.
+Shortlisted teams along with mentor traveling to the
+grand finale are eligible for The maximum ceiling of
+travel reimbursement is Rs 3,000/- per person (subject
+to actuals) for round trip including local mileage, if any
+based on production the actual bills irrespective of
+any mode of travel
+The nodal centers will be arranging for
+accommodation of teams during the grand finale
+Each college/institute will issue a stamped photo ID to
+each member of the teams selected for the finale
+College photo ID and Consent letter copy is
+mandatory for participating in the finale
+===== SIH2026_Guidelines page 24 =====
+Intellectual property (IP)
+of the winning idea would
+be split equally between
+industry that gave the
+problem statements and
+the winning team or will
+be decided on the mutual
+agreement.
+Selected ideas will be
+supported to be developed
+further so that industries/
+government institutions
+will be able to utilize these
+ideas; more efforts beyond
+the finale are required
+from the selected teams
+thereafter
+The ideas or solutions
+provided/developed/pro
+posed by the teams must
+be new and must not
+have been present in any
+previous event/program
+of any sort
+ MISCELLANEOUS INFORMATION
+17
+SIH 2026
+===== SPOC page 20 =====
+MODE OF SIH GRAND FINALE
+Post Idea submission process, the ideas will be evaluated by experts.
+Evaluation criteria will include novelty of the idea, complexity, clarity and
+details in the prescribed format, feasibility, practicability, sustainability, scale
+of impact, user experience and potential for future work progression.
+13
+IDEA SELECTION CRITERIA
+SIH 2024 Grand Finale will be held offline at various nodal centers across pan
+India and teams have to travelled to their respective nodal centers. The
+tentative dates for the hackathon is 2nd/3rd week of Nov 2024
+SIH 2024
+===== SPOC page 22 =====
+RESPONSIBILITIES OF MENTOR
+To mentor and guide teams via
+phone/video-chat or in person before
+the grand finale to help convert
+students' ideas into a working prototype
+To work collaboratively with the allotted
+student team during the SIH Grand
+Finale to build a working prototype
+The travel and accommodation of students and their mentors will be taken care by
+SIH2024 organizers. However, both mentor and students are eligible for same class of
+stay and travel
+To provide guidance and support to
+their allocated teams. Mentors along
+with participating students work
+together as a team during the grand
+finale
+Out-station travel to the hackathon
+venue may be necessary to participate
+in the Grand Finale
+SIH 2024
+15
+===== SPOC page 24 =====
+Intellectual property (IP)
+of the winning idea would
+be split equally between
+industry that gave the
+problem statements and
+the winning team or will
+be decided on the mutual
+agreement.
+Selected ideas will be
+supported to be developed
+further so that industries/
+government institutions
+will be able to utilize these
+ideas; more efforts beyond
+the finale are required
+from the selected teams
+thereafter
+The ideas or solutions
+provided/developed/pro
+posed by the teams must
+be new and must not
+have been present in any
+previous event/program
+of any sort
+ MISCELLANEOUS INFORMATION
+17
+===== SIH2024_Eval pages=2 =====
+--- page 1 ---
+ 
+ 
+ 
+Evaluation Guideline for Smart 
+India Hackathon 
+ 
+Round 1 Evaluation Criteria: 
+ 
+1. Presentation of the Solution/Idea: The basic solution provided by the team against 
+the problem statement or Theme  
+2. Innovation: Uniqueness and creativity of the solution. 
+3. Solution Approach: The roadmap or framework that guides the development or 
+creation of a solution to a given problem 
+4. Technical Soundness/ Feasibility: Strength and reliability of the technical aspects 
+and Practicality and viability of implementation. 
+5. Execution Time Line for Hackathon: Blueprint of Prototype Completion Timeline 
+w.r.t hackathon duration  
+ 
+ Marks need to be given against each parameter between (1-20) 
+ Total Marks for Round I = 100 maximum marks  
+ Weightage of Round I = 20 % of the total marks 
+Round 2 Evaluation Criteria: 
+ 
+1. Prototype Development: Progress made in developing a working prototype. 
+2. Improvement: Any changes or additions in the functionality of the product based 
+on the feedback/Suggestion provided by the evaluators / mentors 
+3. Integration: How well different components work together. 
+4. Usability: User-friendliness and ease of adoption. 
+5. Team work: Contribution of the individual team member. 
+ 
+ Marks need to be given against each parameter between (1-20) 
+ Total Marks for Round II = 100 maximum marks  
+ Weightage of Round II = 30 % of the total marks 
+ 
+ 
+--- page 2 ---
+ 
+ 
+ 
+ 
+Round 3 Evaluation Criteria: 
+1. Functionality / Relevance to the problem statement or Theme: How well the 
+prototype meets the specified requirements. 
+2. Performance/ Final Demo: Efficiency and effectiveness in real-world scenarios. 
+Clarity, coherence, and persuasiveness of the presentation. 
+3. User Experience/ Aesthetic and Design of the final product/ User ergonomics: 
+Quality of interaction and satisfaction for end-users. 
+4. Market readiness/ Impact:  The preparedness of a product, service, or solution to 
+enter the market and make an impact. 
+5. Implementation plan / Future Scope: Strategy for putting the solution into action 
+and its potential for future development. 
+ 
+ Marks need to be given against each parameter between (1-20) 
+ Total Marks for Round III = 100 maximum marks  
+ Weightage of Round III = 50 % of the total marks 
+ 
+Final Score Calculation Matrix  
+  The calculation will be done at the Evaluation portal. 
+ 
+Marks of 
+Evaluator 
+I 
+Marks of 
+Evaluator 
+II 
+Marks of 
+Evaluator 
+III 
+Grand Total Average 
+marks 
+Weightage 
+in  % 
+Weighted Average 
+Marks 
+ A B C D = A + B + C E = D/3 W G = E * W 
+Round I X1 X2 X3 D1 = X1 + X2 + X3 E1 = D1/3 W 1 = 20% G1 = W1 * E1 
+(20 Max) 
+Round II Y1 Y2 Y3 D2 = Y1 + Y2 +Y3 E2 = D2/3 
+ W 2 = 30% G2 = W2 * E2 
+(30 max) 
+Round III Z1 Z2 Z3 D3 = Z1 + Z2 + Z3 E3 = D3/3 W 3 = 50% G3 = W3 *E3 
+(50 Max) 
+Final Score 
+T = G1 + G2 + G3 
+(100 Max) 
+ 

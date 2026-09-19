@@ -1,0 +1,21 @@
+{
+  "_comment": "KWB MOCK — inspired by Onyx ACL-before-retrieve intent. Not Onyx schema.",
+  "principal": {
+    "user_id": "u-demo-1",
+    "email": "inspector@plant.local",
+    "group_ids": ["inspectors", "unit-3"]
+  },
+  "grant_id": "grant-demo-001",
+  "allowed_doc_ids": ["SOP-CR-12", "CORR-CALC-2024-03"],
+  "denied_behavior": "NOT_FOUND",
+  "retrieve_policy": {
+    "authz_before_retrieve": true,
+    "public_docs": [],
+    "fail_closed": true
+  },
+  "example_query": {
+    "q": "corrosion rate unit 3",
+    "expected_hits": ["SOP-CR-12"],
+    "expected_miss_as_not_found": ["HR-SALARY-BAND"]
+  }
+}

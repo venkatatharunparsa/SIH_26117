@@ -1,0 +1,86 @@
+PPT paused — language scrubbed post GATE_90_REDTEAM; do not claim CERT.
+
+Create a 960 by 420 PNG. Exact size width=960 height=420. White #FFFFFF.
+
+ATTACH the layout reference image LAYOUT_S2.svg (or its PNG export) and match regions A/B/C/D exactly.
+READ AND OBEY SHARED_RULES.txt first (Rev 2.2 reject list still applies).
+This image = SIH Idea Slide 2 CONTENT PANEL — Knowledge Work Bench.
+Layout Rev 3.0: MORE space for Proposed + Detailed; SHRINK Addresses; Uniqueness = proof/Never (not slogan chips).
+No visible grid lines in final art — region colours in LAYOUT_S2 are guides only; final art uses clean white + navy bars.
+Flat. No robots. No paragraphs. No SIH chrome.
+
+GRID (layout aid only):
+x: 0,80,160,240,320,400,480,560,640,720,800,880,960
+y: 0,70,140,210,280,350,420
+
+══════════════════════════════════════════════════════════════════
+REGION A — Proposed Solution — cells C1 to C5, rows R1 to R4
+(WIDER + TALLER than old layout — this is the left hero story)
+══════════════════════════════════════════════════════════════════
+Navy bar white text exact:
+"Proposed Solution"
+Five short bullets exact (plain English, large enough to read):
+"• Knowledge Work Bench = offline workbench for confidential industrial knowledge work. Not a chatbot. Not a new LLM."
+"• User gets: scan → DRAFT Word (.docx) approval note; coding task → run + verify in a sealed sandbox."
+"• Models: pluggable open-weight on a SEPARATE GPU runtime. Workbench reaches models only via local gateway (/v1)."
+"• Control: every job needs a task grant. Human is final approver. Software only drafts and checks."
+"• Safety: files stay in KWB store. Never write plant systems (DCS/EAM/ERP). Demo shows Monitor A evidence pack (start-stop snapshot — not CERT)."
+
+══════════════════════════════════════════════════════════════════
+REGION B — Detailed explanation — cells C6 to C12, rows R1 to R4
+(TALLER diagram zone — this is the right hero diagram)
+══════════════════════════════════════════════════════════════════
+Navy bar white text exact:
+"Detailed explanation of the proposed solution"
+
+Draw a CLEAR diagram (not 11 tiny equal boxes). Use three horizontal lanes:
+
+LANE 1 title "Shared control" — boxes with arrows, labels exact:
+"Person" → "Task grant" → "Workbench brain" → "Local gateway" → "On-prem model"
+
+LANE 2 title "Job 1 — Inspection" — boxes with arrows, labels exact:
+"Scan / photo" → "OCR / vision" → "Human checks extract" → "Word DRAFT" → "Human approve" → "Audit"
+
+LANE 3 title "Job 2 — Code" — boxes with arrows, labels exact:
+"Code task" → "Auto-pick model" → "Sandbox (no network)" → "Pass / fail evidence" → "Human decide"
+
+Three callout lines under lanes (exact):
+"Only the gateway opens the model runtime. Sandbox never wraps the GPU."
+"Auto-select ≥2 task types → G1 floor: single-tag adopt OK; full: two model_ids when 2nd chat staged offline (load one model at a time on mid-GPU)."
+"Missing cite, bad grant, or audit fail → stop (fail-closed)."
+
+Use readable box size. Green for start boxes, navy for gateway/model, amber for human steps, red only for Audit stop/fail-closed idea — keep professional, not rainbow clutter.
+
+══════════════════════════════════════════════════════════════════
+REGION C — How it addresses the problem — cells C1 to C12, row R5 ONLY
+(THIN strip — only 3 table rows)
+══════════════════════════════════════════════════════════════════
+Navy bar white text exact:
+"How it addresses the problem"
+Compact 2-column table. Headers exact: "Expected Solution" | "Knowledge Work Bench"
+Row1: "Local mid-GPU deploy; smaller model OK" | "Separate runtime; quant/smaller models OK; no weights inside workbench"
+Row2: "Auto-select ≥2 task types" | "G1 floor single-tag OK; full ≥2 model_ids if staged"
+Row3: "Scan→Word + sandbox code + zero external calls" | "Word DRAFT path + sealed sandbox + Monitor A evidence pack (not CERT)"
+
+══════════════════════════════════════════════════════════════════
+REGION D — Innovation and uniqueness — cells C1 to C12, row R6
+(Keep OFFICIAL pointer title. Body = selection proof, not slogan chips)
+══════════════════════════════════════════════════════════════════
+Navy bar white text exact:
+"Innovation and uniqueness of the solution"
+
+Split R6 into TWO cards side by side:
+
+LEFT card title exact: "Must-work proof (what jury can see)"
+Five ticks in one line or tight wrap exact:
+"DRAFT Word · G1 floor/full model_ids · sandbox verify · multimodal scan · Monitor A pack"
+
+RIGHT card title exact: "Never (why it is PSU-safe)"
+One line exact:
+"No cloud LLM · never write DCS/EAM/ERP · no auto safety/statutory decision · Excel/PPT not claimed as must-work"
+
+Full-width footer line under both cards exact:
+"vs Claude/Copilot/Codex: cannot take P&IDs on-prem. vs Open WebUI/Ollama: chat+RAG is not grant → Word → sandbox → Monitor A evidence pack."
+
+FORBIDDEN: AIR-GAP/TRUTH/INTEGRATION sticker chips; Excel/PPT as must; CERT badge; 99% OCR; fake URL; WP-xx codes; 11-box single spaghetti loop; bare WAN=0 as certification claim.
+Spell: Knowledge Work Bench, DRAFT, .docx, /v1, Monitor A, model_ids, DCS/EAM/ERP.

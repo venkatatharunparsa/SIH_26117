@@ -1,0 +1,38 @@
+PPT paused — language scrubbed post GATE_90_REDTEAM; do not claim CERT.
+
+Create a 960 by 420 PNG. Exact size 960×420.
+
+READ AND OBEY SHARED_RULES.txt (Rev 2.2) first.
+This image = RESEARCH / REFERENCES + competitor matrix.
+NASSCOM market line DROPPED (red-team: reduce S6 overflow).
+
+REGION A — References — C1–C5, R1–R4
+Bar: "Research / references"
+Bullets exact:
+"• SIH26117 Expected Solution — Word, sandbox, multimodal, Monitor A evidence pack"
+"• MRPL 15.0 MMTPA — mrpl.co.in/Content/Profile"
+"• OISD-STD-128 (name only) — oisd.gov.in"
+"• DPDP Act 2023 · CERT-In Direction 20(3)/2022 (policy-shaped — not a certification badge)"
+"• IndiaAI Cabinet 07 Mar 2024 — PIB PRID 2012355 — ₹10,371.92 crore; 10,000+ GPUs"
+"• NIST AI 600-1 (Jul 2024)"
+"• ReAct arXiv:2210.03629 · RAG arXiv:2005.11401"
+"• DocLayNet arXiv:2206.01062 — layout research; NOT our OCR %"
+"• Compose (not fork): llama.cpp · vLLM · Tesseract · python-docx · MCP"
+
+REGION B — Matrix — C6–C12, R1–R4
+Bar: "Knowledge Work Bench vs existing tools (design / demo spine)"
+Headers: "Tool | Air-gap proof | Auto-select | Sandbox | HITL→Word | Jail calc/code"
+Row1: "Knowledge Work Bench | Y (Monitor A pack) | Y (G1 floor/full) | Y | Y | Y"
+Row2: "ChatGPT / Copilot / Claude | N | cloud | N | weak | N"
+Row3: "Open WebUI + Ollama | local possible | weak | N | weak | N"
+Row4: "PrivateGPT / AnythingLLM | often local | N | N | weak | N"
+Row5: "Continue / OpenHands | local possible | coding | dev jail | N | partial"
+Y cells green #548235. N/weak grey. Not every cell green.
+
+REGION C — Difference — C1–C12, R5–R6
+Navy strip, white text, two lines exact:
+"Difference: others = chat, infra, or coding agents. Knowledge Work Bench = PSU inspection artefacts + cite/NOT FOUND + Monitor A evidence pack on mid-range GPU (not CERT)."
+"IndiaAI compute (PIB PRID 2012355) complements us — we are the on-prem workbench application, not the national GPU pool."
+
+Spell: Knowledge Work Bench, ₹10,371.92, PRID 2012355, 10,000+, NOT FOUND, Monitor A.
+No IMARC/M&M GenAI TAM. No 38,000 GPUs. No Excel must tick. No CERT badge. No bare WAN=0 certification claim.

@@ -1,0 +1,41 @@
+DALL-E 3. Widescreen 1792x1024. Highest quality. Pure white #FFFFFF PowerPoint body. Flat 2D vector. Navy #1F497D bars. Black text. This is SIH slide 2 — scannable, high impact. Not an essay. Not an empty four-bullet card. No photo. No app UI. No dark background. No SIH logo. No blur. Product name exactly "KWB".
+
+Layout (3% margin). Keep TOP-RIGHT clean: the six-step diagram is the hero. Do NOT place any paragraph, bullet list, or extra cards under those six boxes.
+
+TOP-LEFT — 46% width, 40% height. Navy bar exact:
+"Proposed Solution (Describe your Idea/Solution/Prototype)"
+Five short bullets only, one or two lines each, large type. Exact:
+"• KWB: on-prem agentic workbench for confidential plant work. Not a chatbot. Not a new LLM."
+"• Loop 1: scanned inspection → OCR → HITL JSON → Word note + Excel sheet."
+"• Loop 2: code written, run, and pytest-verified in Docker --network=none (GPU stays outside the jail)."
+"• Software = OpenAI-compatible /v1 client. Org GPU holds weights. New model = new Model Card."
+"• Proof: WAN unplug + host log = 0 external calls. Output always DRAFT. Never write DCS/SIS."
+
+TOP-RIGHT — 54% width, 40% height. Navy bar exact:
+"Detailed explanation of the proposed solution"
+ONE row of six LARGE equal rounded boxes with thick arrows. Each box: number + short label only. Exact labels:
+"1 Scan"  "2 OCR"  "3 Extract /v1"  "4 HITL JSON"  "5 Sandbox CR"  "6 Word DRAFT"
+Directly under the arrows, TWO short caption lines only (no third block of text):
+"Same boxes at org scale. Mock EAM now; real read-only API later. Never write DCS."
+"8 GB: one 7B at a time. Two model ids in the log."
+Leave the rest of this panel as padding around the big boxes. Do not fill it with a paragraph.
+
+MIDDLE — full width, 35% height. Navy bar exact:
+"How it addresses the problem"
+ONE table, TWO columns only (not three). Five rows. Medium type, readable, not a wall. Headers exact:
+"PS requirement" | "KWB mechanism"
+"Claude/Codex forbidden on P&IDs" | "Nothing leaves the LAN. WAN log is the demo."
+"1-5 day inspection pack (estimate, not MRPL SLA)" | "Cut find-and-type. Human still judges. DRAFT Word+Excel."
+"Must not lock to one model" | "Task router + Model Cards + GET /v1/models. Two ids in the log."
+"Must act like an agent + real files" | "OCR, sandbox CR, python-docx — not a chat bubble."
+"Mid-range GPU; PS allows smaller than 120B" | "7B Q4 sequential on RTX 4060 8 GB. PPT is later."
+
+BOTTOM — remaining height. Navy bar exact:
+"Innovation and uniqueness of the solution"
+Three equal cards + one navy badge on the right. Short punchy text:
+"vs ChatGPT / Copilot / Claude: air-gap + audit. Cisco 2024: 48% of orgs pasted non-public data into GenAI."
+"vs Open WebUI / Ollama / PrivateGPT: we add task router, HITL JSON gate, sandbox calc, template Word."
+"vs OpenHands / Continue: inspection workbench with a jail. Borrow patterns. Do not fork."
+Badge exact: "WAN log = 0"
+
+Spell KWB, /v1, HITL, OCR, python-docx, RTX 4060. No 70B loaded. No fake UI. No essay under the flowchart.

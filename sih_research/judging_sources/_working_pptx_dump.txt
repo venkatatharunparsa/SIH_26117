@@ -1,0 +1,136 @@
+SLIDES 7
+===== 1 =====
+TITLE PAGE
+
+SMART INDIA HACKATHON 2026
+
+Problem Statement ID – SIH26117
+Problem Statement Title- Sovereign On-Premise Agentic AI Workbench
+using Open-Weight Multimodal LLMs for Confidential Industrial Work
+Theme- Smart Automation
+PS Category- Software
+Team ID- TBD (portal)
+Team Name (Registered on portal)- TBD
+
+===== 2 =====
+Sovereign Workbench
+
+Proposed Solution (Describe your Idea/Solution/Prototype)
+• Sovereign Workbench — air-gapped agentic workbench on the org GPU (not a chatbot)
+• Scan → on-device OCR → task-routed open-weight models → HITL fact-sheet → Word + Excel
+• Coding task run and verified in Docker --network=none (GPU server stays outside the jail)
+
+How it addresses the problem
+• Confidential notes/P&IDs cannot go to Claude/Codex; PS requires own GPU + zero external calls
+• Auto-select ≥2 task types (extract vs code) via Model Cards + OpenAI-compatible /v1 gateway
+• Real deliverable (python-docx), citations or NOT FOUND, draft watermark, visible WAN-off log
+
+Innovation and uniqueness of the solution
+• vs Open WebUI/Ollama/PrivateGPT: task gateway, controlled templates, sandbox calc, HITL, egress proof
+• vs ChatGPT/Copilot: nothing leaves premises; 7B-class sequential on RTX 4060 8 GB (PS allows smaller models)
+• Not plant DCS control. Not a new LLM. Integration for industrial documents + proof of sovereignty
+
+2
+
+@SIH Idea submission- Template
+
+TBD
+
+===== 3 =====
+TECHNICAL APPROACH
+
+Technologies to be used (e.g. programming languages, frameworks, hardware)
+• Hardware: Laptop A RTX 4060 8 GB = runtime · Laptop B RTX 3050 6 GB = workbench UI (no LLM)
+• Software: Python workbench · OpenAI-compat /v1 (Ollama/vLLM/llama-server — pick at build) · CPU OCR
+• python-docx + openpyxl · Docker Desktop WSL2 --network=none for generated code + CR calc only
+• Local JSON KB (schema = future EAM) · on-disk Agent Skills (5) · audit log
+
+Methodology and process for implementation (Flow Charts/Images/ working prototype)
+  Engineer upload scan → CPU OCR → gateway vision_extract → JSON fact sheet → HITL approve
+       → sandbox CR=(t_prev-t_curr)/Δt → gateway draft_note (different model id) → .docx DRAFT
+  Parallel PS loop: prompt → code_sandbox → pytest in Docker jail → pass/fail shown
+  8 GB: unload/load one 7B-class at a time · WAN unplugged · never wrap GPU in the sandbox
+
+3
+
+@SIH Idea submission- Template
+
+TBD
+
+===== 4 =====
+FEASIBILITY AND VIABILITY
+
+Analysis of the feasibility of the idea
+• PS allows mid-range GPU / smaller models if 120B absent — 8 GB is that case
+• 36h REAL: OCR, two model ids, HITL JSON, Word, Excel CR, sandbox tests, WAN-off log
+• MOCKED (same schema): EAM/historian JSON · NOT claimed: SAP, 14B, PPT, two models in VRAM
+
+Potential challenges and risks
+• Small-model tool-calling / OCR on bad scans · Docker Desktop blocked at venue · fake-looking routing
+
+Strategies for overcoming these challenges
+• Sequential two GGUF ids (not two prompt labels) · OCR confidence + NOT FOUND · calc only in sandbox
+• Docker primary; WSL jail fallback (disclose if weaker) · WAN unplug + host/packet log · draft forever
+
+4
+
+@SIH Idea submission- Template
+
+TBD
+
+===== 5 =====
+IMPACT AND BENEFITS
+
+Potential impact on the target audience
+• Primary: inspection / integrity engineer (MRPL beachhead)
+• Secondary: process, HSE, procurement, other PSU knowledge-work (same workbench, new templates later)
+
+Benefits of the solution (social, economic, environmental, etc.)
+• Time-to-DRAFT note: industry estimate scanned inspection 1–5 days → target hours (KB; not an MRPL SLA)
+• Cuts shadow ChatGPT on P&IDs / vendor / board data · audit trail · DPDP/CERT-In aligned logging (one line)
+• Economic: reuse existing GPU; no claimed crore savings · Environmental: no extra training run claimed
+• Scale: change base_url from laptop → plant GPU; HITL stays; never writes DCS/SIS/PLC
+
+5
+
+@SIH Idea submission- Template
+
+TBD
+
+===== 6 =====
+RESEARCH  AND REFERENCES
+
+Details / Links of the reference and research work
+• SIH26117 Expected Solution (inspection→Word, sandbox coding, multimodal, zero-egress proof)
+• OISD-STD-128 (name/edition only) · API 510-class report fields (not pasted standard body)
+• OpenAI-compatible local serving docs (Ollama/vLLM/llama.cpp) · Agent Skills spec (on-disk)
+• Cursor sandboxing (code jail ≠ GPU) · SIH 2026 Guidelines: 6-slide PDF, nine criteria, no weights
+
+You vs existing (ticks only if true)     Air-gap  Citations  Sandbox  HITL  Word/Excel
+Sovereign Workbench (ours)                Y        Y          Y        Y     Y
+ChatGPT / Copilot / Claude                N        n/a        N        n/a   n/a
+Open WebUI / Ollama / PrivateGPT          local    N          N        weak  chat
+
+6
+
+@SIH Idea submission- Template
+
+TBD
+
+===== 7 =====
+7
+
+@SIH Idea submission- Template
+
+Kindly keep the maximum slides limit up to six (6). ( Including the title slide) 
+Try to avoid paragraphs and post your idea in points /diagrams / Infographics /pictures 
+Keep your explanation precise and easy to understand
+Idea should be unique and novel. 
+You can only use provided template for making the PPT without changing the idea details pointers (mentioned in previous slides).
+You need to save the file in PDF and upload the same on portal. No PPT, Word Doc or any other format will be supported.
+
+Note - You can delete this slide (Important Pointers) when you upload the details of your idea on SIH portal.
+
+IMPORTANT INSTRUCTIONS
+
+Please ensure below pointers are met while submitting the Idea PPT:

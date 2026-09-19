@@ -1,0 +1,5 @@
+Onyx / DanswerAI — dual license:
+- MIT Expat for content outside ee/ directories
+- Onyx Enterprise License under ee/
+Upstream: https://raw.githubusercontent.com/onyx-dot-app/onyx/main/LICENSE
+This folder quotes MIT-path code only (document_access.py). Do not copy ee/.

@@ -1,0 +1,3 @@
+Apache License 2.0 — deepset GmbH / Haystack
+Upstream: https://raw.githubusercontent.com/deepset-ai/haystack/main/LICENSE
+This folder holds documentation-shaped excerpts only.

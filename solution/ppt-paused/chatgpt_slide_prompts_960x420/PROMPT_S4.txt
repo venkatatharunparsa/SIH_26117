@@ -1,0 +1,49 @@
+PPT paused — language scrubbed post GATE_90_REDTEAM; do not claim CERT.
+
+Create a 960 by 420 PNG. Exact size 960×420.
+
+READ AND OBEY SHARED_RULES.txt (Rev 2.2) first.
+This image = FEASIBILITY AND VIABILITY (REAL/MOCK/LATER + risks).
+
+REGION A — REAL — C1–C4, R1–R2
+Header fill light green: "REAL (demo spine)"
+Bullets exact:
+"• Scan → H1 → DRAFT Word (.docx)"
+"• ≥2 task types; G1 floor single-tag adopt OK / full ≥2 model_ids if staged"
+"• Sandbox code + calc-in-jail"
+"• Multimodal OCR/VLM"
+"• Monitor A evidence pack (start-stop — not CERT)"
+"• G1–G10 → demo_ready"
+
+REGION B — MOCK — C5–C8, R1–R2
+Header fill light grey: "MOCK (same architecture)"
+Bullets exact:
+"• Local SOP/policy packs (not live DMS)"
+"• One allowlisted MCP server"
+"• Local users (no live SSO)"
+"• Lexical retrieve on curated packs"
+
+REGION C — LATER / NEVER — C9–C12, R1–R2
+Header fill light red: "LATER / NEVER"
+Bullets exact:
+"• Excel & PPT artefacts = LATER"
+"• Live EAM/DMS APIs = LATER"
+"• Continuous WAN monitor = LATER"
+"• Write DCS/EAM/ERP SoR = NEVER"
+"• Cloud LLM / public /v1 = NEVER"
+
+REGION D — Risks — C1–C12, R3–R6
+Bar: "Challenges / Risks — Mitigation"
+Headers: "Challenge" | "Risk" | "Mitigation"
+Row1: "Mid-GPU VRAM" | "Fake dual-load" | "Sequential load; G1 floor single-tag OK / full two model_ids if staged"
+Row2: "LLM invents numbers" | "Bad eng. claim" | "HITL + schema; math only in sandbox"
+Row3: "Bad scan / handwriting" | "Invented readings" | "NOT FOUND; fail closed"
+Row4: "Sandbox on Windows" | "No verify path" | "Podman/Docker none OR process jail"
+Row5: "Org overbuild" | "No SIH demo" | "G1–G10 spine first; rest MOCK/LATER"
+Row6: "Air-gap theatre" | "Weight pull on day-1" | "USB pre-stage; unplug; Monitor A evidence pack"
+
+Footer exact:
+"PS allows smaller models if 120B absent. Scale = more GPUs behind SAME /v1 + Model Cards — not a rewrite."
+
+Spell: Knowledge Work Bench, G1–G10, demo_ready, NOT FOUND, SoR, Monitor A.
+FORBIDDEN: CERT badge; bare WAN=0 as certification claim.

@@ -1,0 +1,5 @@
+# Task type → model card id (G1: ≥2 routes)
+routes:
+  inspection: inspect-draft
+  coding: code-assist
+  freestyle: general-fallback

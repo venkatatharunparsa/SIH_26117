@@ -1,0 +1,38 @@
+# DALL-E rules (read before every prompt)
+
+ChatGPT **DALL-E 3**. Official SIH template is **white**. These images are **PPT body graphics**, not a product demo.
+
+## Always paste this block first, then the slide prompt
+
+```
+DALL-E 3. Widescreen 1792x1024. Highest quality. Pure white background #FFFFFF (same as a PowerPoint slide). Flat 2D vector infographic. Large bold navy #1F497D headings. Black body text. Thin blue #0070C0 lines. Rounded rectangles and arrows only.
+
+This is a SIH idea-slide BODY, not an app.
+
+FORBIDDEN:
+- any software UI, chat window, dashboard, laptop screen, "Run" button, model hub
+- dark / navy full-slide background
+- photographs (refinery, GPU, people, night sky)
+- blur, bokeh, low-res, jpeg dirt, watermarks
+- SIH logo, brain graphic, footer bar
+- Llama 70B, 120B, two models on screen at once, PowerPoint as a 36-hour demo output
+- extra slogans not in the quoted text
+
+REQUIRED:
+- white #FFFFFF everywhere including margins
+- crisp sharp letters (print-like, not a photo of a slide)
+- quoted strings only; if space is tight, enlarge type, do not paraphrase
+```
+
+## In ChatGPT
+
+1. New chat per slide. Type: `Create image`
+2. Paste the global block + `PROMPT_Sn.txt`
+3. Ask: **widescreen 1792×1024**
+4. Do **not** attach the colored GRID/LAYOUT PNGs (DALL-E will copy the overlay)
+5. If blurry: `Regenerate: same layout, vector, sharper text, white background, no photo, 1792x1024`
+6. Paste onto the official white slide **under the title**, **above the blue footer**, **left of the SIH logo**. Resize so official chrome stays visible. White image on white slide will blend.
+
+## Slide 1
+
+Type in the template. Do not generate.

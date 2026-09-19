@@ -1,0 +1,38 @@
+# KWB demo — Ollama is INFERENCE ONLY.
+# Policy (binding):
+#   - NEVER run `ollama pull` / registry download from this workbench or demo box.
+#   - Adopt ONLY models already present in the local Ollama store.
+#   - Adopted 2026-09-19 from `ollama list`: llama3.2:3b (chat).
+#   - nomic-embed-text is embed-only — not used for /v1 chat (not adopted for cards).
+#   - G1 honesty (WP-18 rev 1.1 / GATE_90 A3):
+#       Floor: ≥2 task→card routes; same model_id OK → label single-tag adopt.
+#       Full: ≥2 distinct model_ids only when a 2nd chat tag is staged offline.
+#       NEVER pull to satisfy G1. card_ids still differ (inspect vs code).
+
+llm_base_url: "http://127.0.0.1:11434"
+bind_host: "127.0.0.1"
+bind_port: 8080
+
+policy:
+  runtime: ollama
+  inference_only: true
+  no_pull: true
+  no_registry: true
+  adopt: local_tags_only
+  adopted_at: "2026-09-19"
+  adopted_chat_tags: ["llama3.2:3b"]
+  not_adopted: ["nomic-embed-text:latest"]  # embed path only; not chat cards
+
+cards:
+  - id: inspect-draft
+    model_id: llama3.2:3b
+    enabled: true
+    task_families: [inspection]
+  - id: code-assist
+    model_id: llama3.2:3b
+    enabled: true
+    task_families: [coding]
+  - id: general-fallback
+    model_id: llama3.2:3b
+    enabled: true
+    task_families: [inspection, coding, freestyle]

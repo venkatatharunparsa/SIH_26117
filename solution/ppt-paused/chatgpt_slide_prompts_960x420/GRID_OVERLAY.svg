@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+  <rect width="960" height="420" fill="#FFFFFF"/>
+  <g stroke="#0070C0" stroke-width="1" opacity="0.4">
+    <line x1="80" y1="0" x2="80" y2="420"/><line x1="160" y1="0" x2="160" y2="420"/>
+    <line x1="240" y1="0" x2="240" y2="420"/><line x1="320" y1="0" x2="320" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="420"/><line x1="480" y1="0" x2="480" y2="420"/>
+    <line x1="560" y1="0" x2="560" y2="420"/><line x1="640" y1="0" x2="640" y2="420"/>
+    <line x1="720" y1="0" x2="720" y2="420"/><line x1="800" y1="0" x2="800" y2="420"/>
+    <line x1="880" y1="0" x2="880" y2="420"/>
+  </g>
+  <g stroke="#C0504D" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="70" x2="960" y2="70"/><line x1="0" y1="140" x2="960" y2="140"/>
+    <line x1="0" y1="210" x2="960" y2="210"/><line x1="0" y1="280" x2="960" y2="280"/>
+    <line x1="0" y1="350" x2="960" y2="350"/>
+  </g>
+  <rect x="1" y="1" width="958" height="418" fill="none" stroke="#1F497D" stroke-width="3"/>
+  <g fill="#1F497D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold">
+    <text x="12" y="22">Knowledge Work Bench | 960x420 | 12x6 | Rev 2.2</text>
+    <text x="28" y="55">C1</text><text x="108" y="55">C2</text><text x="188" y="55">C3</text>
+    <text x="268" y="55">C4</text><text x="348" y="55">C5</text><text x="428" y="55">C6</text>
+    <text x="508" y="55">C7</text><text x="588" y="55">C8</text><text x="668" y="55">C9</text>
+    <text x="748" y="55">C10</text><text x="828" y="55">C11</text><text x="900" y="55">C12</text>
+    <text x="8" y="95">R1</text><text x="8" y="165">R2</text><text x="8" y="235">R3</text>
+    <text x="8" y="305">R4</text><text x="8" y="375">R5</text><text x="8" y="412">R6</text>
+  </g>
+</svg>

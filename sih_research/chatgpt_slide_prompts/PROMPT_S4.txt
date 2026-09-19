@@ -1,0 +1,61 @@
+DALL-E 3. Widescreen 1792x1024. Highest quality. Pure white #FFFFFF PowerPoint body. Flat 2D vector. Navy #1F497D bars. Black body text. Comfortable spacing. Fill the canvas: LEFT 60% width and RIGHT 40% width, full height except 3% margin. No stacked empty full-width strips. No photo. No app UI. No dark background. No SIH logo. No blur. Do not use lone "Y" or "-" cells — write short phrases so the table is not hollow.
+
+LEFT COLUMN — 60% width, three stacked sections that fill the column.
+
+Section L1 (~28% of column). Navy bar exact:
+"Analysis of the feasibility of the idea"
+Text bullets (no tiny floating pills). Exact:
+
+"• The PS already allows a smaller open-weight model if 120B-class hardware is missing at the venue. Our runtime is RTX 4060 8 GB. One 7B-class Q4 GGUF fits (~4.5–5.5 GB with context). That is feasible, not a downgrade apology."
+
+"• A 36-hour / portal prototype is one inspection loop plus one sandbox coding loop — not SAP, not a certified air-gap, not a plant GPU farm. SIH portal allows public sample PDFs/P&IDs, so we do not need MRPL files to prove the spine."
+
+"• Viability: all listed tools are open source and the GPU is already owned. Scaling later is more VRAM and a real read-only EAM API behind the same /v1 socket. HITL and DRAFT labels stay at every scale. We never write DCS, SIS, or PLC."
+
+Section L2 (rest of left column). Navy bar exact:
+"36h honesty: REAL / MOCK / LATER"
+Table 4 columns, FULL width of the 60% column, 7 rows, wrapped phrases in every cell. Headers exact:
+"Item" | "REAL in P1" | "MOCK now" | "LATER (P2–P3)"
+"Scan OCR to HITL JSON to Word note" | "Built: python-docx from approved fields" | "not used" | "plant Word template library"
+"Excel corrosion sheet + pytest" | "Built in Docker --network=none" | "not used" | "more formulas, RBI export"
+"Auto-select two task types" | "Two model ids, sequential unload/load" | "not used" | "two models resident if GPU allows"
+"Air-gap proof" | "WAN unplug + host/packet log = 0" | "not used" | "accredited plant air-gap"
+"EAM / historian / SAP / DMS" | "not claimed live" | "JSON/CSV same schema as future API" | "read-only plant connectors"
+"PPT pack, 14B, SSO, SIEM" | "not in 36h" | "not used" | "after SIH / pilot"
+"DCS / SIS / PLC / permits" | "NEVER" | "NEVER" | "NEVER"
+
+RIGHT COLUMN — 40% width, fills remaining horizontal. Navy bar exact:
+"Potential challenges and risks"
+Subtitle on same bar: "Strategies for overcoming these challenges"
+Do not use a sparse 3-column table with short words. Use FIVE stacked explanation blocks (rounded, full width of the 40% column), each with Challenge / Risk / Mitigation as three labelled lines:
+
+Block 1:
+"Challenge: 8 GB VRAM."
+"Risk: looking like two models run at once (theatre)."
+"Mitigation: unload then load. Audit log must show two distinct model ids. Say sequential out loud."
+
+Block 2:
+"Challenge: 7B tool-calling and arithmetic."
+"Risk: invented millimetres or a wrong corrosion rate."
+"Mitigation: JSON schema + HITL hard gate. CR = (t_prev - t_curr)/dt only in the sandbox. LLM does not do the math."
+
+Block 3:
+"Challenge: bad scans and handwriting."
+"Risk: a confident wrong thickness in the Word file."
+"Mitigation: OCR confidence, NOT FOUND if unusable, fail closed. Engineer still approves the fact sheet."
+
+Block 4:
+"Challenge: Docker Desktop blocked on Windows venue."
+"Risk: coding task is not actually verified."
+"Mitigation: Docker --network=none is primary. WSL jail is fallback and we disclose it is weaker. Host pytest alone is not the demo."
+
+Block 5:
+"Challenge: calling the app air-gapped while weights still pull from the internet."
+"Risk: the sovereign claim fails on first run."
+"Mitigation: pre-stage GGUFs. Unplug WAN. Show the log. CERT-In-shaped 180-day on-prem logs; DPDP-shaped: no cloud processor."
+
+Bottom of the 40% column, one navy filled card, white text, exact:
+"Phase plan (same architecture)"
+"P0 idea PDF now. P1 this loop. P2 read-only EAM + more skills. P3 larger staged models. HITL never removed."
+
+Spell /v1, HITL, OCR, GGUF, python-docx, RTX 4060, DCS, SIS. No "highly scalable". No empty dash cells. No fake UI.

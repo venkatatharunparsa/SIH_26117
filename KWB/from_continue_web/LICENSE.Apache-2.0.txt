@@ -1,0 +1,3 @@
+Apache License 2.0 — Continue Dev, Inc.
+Upstream: https://raw.githubusercontent.com/continuedev/continue/main/LICENSE
+Full text retained upstream; this folder holds documentation excerpts only.

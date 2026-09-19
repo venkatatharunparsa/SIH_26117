@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Knowledge Work Bench</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/desk/styles.css" />
+</head>
+<body>
+  <div class="honesty-bar" role="note">
+    <span><strong>Confidential synthetic</strong></span>
+    <span>DRAFT ≠ plant record</span>
+    <span>Export leave · no forward-accept</span>
+    <span>Monitor A ≠ CERT</span>
+    <span>G1 floor honesty</span>
+    <span>Not a plant Approver</span>
+  </div>
+
+  <!-- ===== Hero: first viewport ===== -->
+  <div class="shell-hero" id="shellHero">
+    <div class="hero-atmosphere" aria-hidden="true"></div>
+    <header class="hero">
+      <h1 class="hero-mark">Knowledge Work Bench</h1>
+      <p class="hero-line">Assist → <em>self-check</em> → export leave</p>
+      <div class="hero-actions">
+        <button type="button" class="primary btn-xl" id="btnHeroStart">Start inspection walk</button>
+        <button type="button" class="secondary" id="btnHeroCoding">Coding path</button>
+      </div>
+      <p class="hero-meta" id="healthMeta">connecting…</p>
+    </header>
+  </div>
+
+  <!-- ===== Guided workbench ===== -->
+  <div class="workbench" id="workbench" aria-live="polite">
+    <div class="wb-top">
+      <div class="wb-brand">
+        Knowledge Work Bench
+        <span>Self-HITL · same-user gates · soft copy leave</span>
+      </div>
+      <div class="wb-health" id="wbHealth">—</div>
+    </div>
+
+    <nav class="step-rail" aria-label="Walk steps">
+      <h2>Walk</h2>
+      <ul class="step-list" id="stepList"></ul>
+    </nav>
+
+    <main class="stage">
+      <div class="banner" id="statusBanner">Select a step action. Deny banners appear here — fail-closed.</div>
+
+      <!-- 0 Intent -->
+      <section class="stage-panel active" data-step="0" id="panel-0">
+        <p class="stage-kicker">Step A · Intent</p>
+        <h2 class="stage-title">Start a personal assist task</h2>
+        <p class="stage-lead">No org chart. No Approver picker. Task type routes the Model Card; you own every gate.</p>
+        <div class="field">
+          <label for="taskType">Task type</label>
+          <select id="taskType">
+            <option value="inspection">Inspection</option>
+            <option value="coding">Coding</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button type="button" class="primary" id="btnStart">Start task</button>
+          <button type="button" class="secondary" id="btnMonStart">Monitor A start</button>
+          <button type="button" class="secondary" id="btnMonStop">Monitor A stop</button>
+        </div>
+        <p class="note-inline">Monitor A = evidence pack on workbench + Ollama loopback — <strong>not CERT</strong>.</p>
+      </section>
+
+      <!-- 1 Files -->
+      <section class="stage-panel" data-step="1" id="panel-1">
+        <p class="stage-kicker">Step B · Files</p>
+        <h2 class="stage-title">Load inputs</h2>
+        <p class="stage-lead">Fixture extract only — no live plant browse. Confidential synthetic.</p>
+        <div class="actions">
+          <button type="button" class="primary" id="btnLoadFx">Load FX-EXT-01</button>
+          <button type="button" class="secondary" id="btnFilesNext">Continue to extract</button>
+        </div>
+        <p class="note-inline" id="filesStatus">No fixture loaded yet.</p>
+      </section>
+
+      <!-- 2 H1 -->
+      <section class="stage-panel" data-step="2" id="panel-2">
+        <p class="stage-kicker">Step C · Extract + H1</p>
+        <h2 class="stage-title">Confirm the extract</h2>
+        <p class="stage-lead">You review the text. H1 is same-user acknowledge — not plant approval.</p>
+        <div class="field">
+          <label for="extract">Fixture extract <span class="hint">Confidential synthetic</span></label>
+          <textarea id="extract"></textarea>
+        </div>
+        <div class="actions">
+          <button type="button" class="primary" id="btnH1">Confirm H1</button>
+        </div>
+      </section>
+
+      <!-- 3 Knowledge -->
+      <section class="stage-panel" data-step="3" id="panel-3">
+        <p class="stage-kicker">Step D · Knowledge</p>
+        <h2 class="stage-title">Retrieve with cite-or-abstain</h2>
+        <p class="stage-lead">Honest NOT FOUND is success. Ack H7 before drafting when cites return.</p>
+        <div class="field">
+          <label for="query">Retrieve query</label>
+          <input id="query" value="thickness vessel minimum" />
+        </div>
+        <div class="actions">
+          <button type="button" class="primary" id="btnRetrieve">Retrieve</button>
+          <button type="button" class="secondary" id="btnH7">Ack H7 (cites)</button>
+        </div>
+        <div class="cites-box" id="citesBox">Cites appear here.</div>
+      </section>
+
+      <!-- 4 DRAFT -->
+      <section class="stage-panel" data-step="4" id="panel-4">
+        <p class="stage-kicker">Step E · DRAFT</p>
+        <h2 class="stage-title">Generate Word DRAFT</h2>
+        <p class="stage-lead">Artefact is a <strong>DRAFT</strong> — not a plant system of record. Version stamps for stale detection.</p>
+        <div class="field">
+          <label for="findings">Findings (DRAFT body)</label>
+          <textarea id="findings">Measured thickness 7.6 mm on V-101 shell course A is below SOP minimum 8.0 mm. Recommend reduced inspection interval. Confidential synthetic.</textarea>
+        </div>
+        <div class="actions">
+          <button type="button" class="primary" id="btnDraft">Generate Word DRAFT</button>
+          <button type="button" class="secondary" id="btnEdit">Edit → stale H2</button>
+        </div>
+        <p class="note-inline" id="draftMeta">No DRAFT yet.</p>
+      </section>
+
+      <!-- 5 Gates -->
+      <section class="stage-panel" data-step="5" id="panel-5">
+        <p class="stage-kicker">Step F · Gates</p>
+        <h2 class="stage-title">Own-work self-check</h2>
+        <p class="stage-lead">H2 binds to artefact_version. Coding path needs sandbox + H9. Fail-closed injects prove deny.</p>
+        <div class="actions">
+          <button type="button" class="primary" id="btnH2">H2 self-check</button>
+        </div>
+        <hr class="divider" />
+        <p class="subhead">Coding branch</p>
+        <div class="actions">
+          <button type="button" class="secondary" id="btnSandboxOk">Sandbox calc</button>
+          <button type="button" class="secondary" id="btnSandboxRed">Sandbox red</button>
+          <button type="button" class="secondary" id="btnH9">H9 accept</button>
+        </div>
+        <hr class="divider" />
+        <p class="subhead">Fail-closed injects</p>
+        <div class="actions">
+          <button type="button" class="danger" id="btnInjectSecret">G9 · secret → export-check</button>
+          <button type="button" class="danger" id="btnInjectModel">G8 · bad model → gateway</button>
+          <button type="button" class="danger" id="btnRevoke">Revoke grant</button>
+        </div>
+      </section>
+
+      <!-- 6 Export -->
+      <section class="stage-panel" data-step="6" id="panel-6">
+        <p class="stage-kicker">Step G · Export leave</p>
+        <h2 class="stage-title">Soft copy off the box</h2>
+        <p class="stage-lead">Leave-with pack only. No forward-accept into plant SoR. Not CERT.</p>
+        <div class="actions">
+          <button type="button" class="primary" id="btnExport">Export leave</button>
+        </div>
+        <div class="success-card" id="leaveSuccess">
+          <h3>Leave pack ready</h3>
+          <p>Download DRAFT Word and the audit leave pack. Soft copy · not CERT · no forward-accept.</p>
+          <div class="actions">
+            <button type="button" class="primary" id="btnDlDraft" disabled>Download DRAFT</button>
+            <button type="button" class="primary" id="btnDlPack" disabled>Download leave pack</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="monitor" aria-label="Monitor B">
+      <div>
+        <h2>Monitor B</h2>
+        <p class="mon-note">Own task only · live audit · not CERT</p>
+      </div>
+      <div class="stat-grid" id="monB">
+        <span class="k">grant</span><span class="v">—</span>
+        <span class="k">task</span><span class="v">—</span>
+        <span class="k">card</span><span class="v">—</span>
+        <span class="k">model</span><span class="v">—</span>
+        <span class="k">version</span><span class="v">—</span>
+        <span class="k">draft</span><span class="v">—</span>
+        <span class="k">H2</span><span class="v">—</span>
+        <span class="k">MonA</span><span class="v">—</span>
+      </div>
+      <div>
+        <h2>Last denies</h2>
+        <div class="deny-list" id="denyList">
+          <div class="deny-chip empty">No denies yet</div>
+        </div>
+      </div>
+      <div>
+        <h2>Audit trail</h2>
+        <div class="audit-log" id="log"></div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    const API = "";
+    const STEPS = [
+      { id: "intent", label: "Intent" },
+      { id: "files", label: "Files" },
+      { id: "h1", label: "H1" },
+      { id: "knowledge", label: "Knowledge" },
+      { id: "draft", label: "DRAFT" },
+      { id: "gates", label: "Gates" },
+      { id: "export", label: "Export" }
+    ];
+
+    const S = {
+      grant_id: null,
+      task_id: null,
+      route: null,
+      draft_filename: null,
+      artefact_version: null,
+      h7_acked: false,
+      h2_ok: false,
+      mon_session: null,
+      step: 0,
+      maxStep: 0,
+      started: false,
+      fixtureLoaded: false,
+      lastDenies: []
+    };
+
+    const banner = document.getElementById("statusBanner");
+    const logEl = document.getElementById("log");
+
+    const FX_EXTRACT =
+`Confidential synthetic — FX-EXT-01
+Asset: V-101 shell course A
+Measured thickness: 7.6 mm
+Location: North quadrant, 1.2 m above grade
+Raw notes: Pit indication near weld toe. Compare to SOP-THK-001 minimum 8.0 mm.`;
+
+    document.getElementById("extract").value = FX_EXTRACT;
+
+    function log(msg, obj) {
+      const line = typeof obj === "undefined" ? msg : msg + " " + JSON.stringify(obj);
+      logEl.textContent = (logEl.textContent ? logEl.textContent + "\n" : "") + line;
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    function setBanner(text, kind) {
+      banner.textContent = text;
+      banner.className = "banner" + (kind ? " " + kind : "");
+      if (kind === "bad") {
+        banner.classList.remove("bad");
+        void banner.offsetWidth;
+        banner.classList.add("banner", "bad");
+      }
+    }
+
+    function pushDeny(code) {
+      if (!code) return;
+      S.lastDenies.unshift(String(code));
+      S.lastDenies = S.lastDenies.slice(0, 6);
+      paintDenies();
+    }
+
+    function paintDenies() {
+      const el = document.getElementById("denyList");
+      if (!S.lastDenies.length) {
+        el.innerHTML = '<div class="deny-chip empty">No denies yet</div>';
+        return;
+      }
+      el.innerHTML = S.lastDenies.map((d) => `<div class="deny-chip">${d}</div>`).join("");
+    }
+
+    function enterWorkbench() {
+      document.body.classList.add("is-working");
+      S.started = true;
+      paintSteps();
+      showStep(S.step);
+    }
+
+    function paintSteps() {
+      const list = document.getElementById("stepList");
+      list.innerHTML = STEPS.map((s, i) => {
+        let cls = "step-item";
+        if (i < S.step) cls += " done";
+        if (i === S.step) cls += " current";
+        const disabled = i > S.maxStep ? "disabled" : "";
+        return `<li><button type="button" class="${cls}" data-goto="${i}" ${disabled}>
+          <span class="idx">${String(i + 1).padStart(2, "0")}</span>
+          <span class="label-full">${s.label}</span>
+          <span class="label-short" hidden>${s.label}</span>
+        </button></li>`;
+      }).join("");
+      list.querySelectorAll("[data-goto]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const i = Number(btn.getAttribute("data-goto"));
+          if (i <= S.maxStep) showStep(i);
+        });
+      });
+    }
+
+    function showStep(i) {
+      S.step = i;
+      document.querySelectorAll(".stage-panel").forEach((p) => {
+        p.classList.toggle("active", Number(p.dataset.step) === i);
+      });
+      paintSteps();
+    }
+
+    function advanceTo(i) {
+      S.maxStep = Math.max(S.maxStep, i);
+      showStep(i);
+    }
+
+    function paintMonB() {
+      const r = S.route || {};
+      document.getElementById("monB").innerHTML = `
+        <span class="k">grant</span><span class="v">${S.grant_id || "—"}</span>
+        <span class="k">task</span><span class="v">${S.task_id || "—"}</span>
+        <span class="k">card</span><span class="v">${r.card_id || "—"}</span>
+        <span class="k">model</span><span class="v">${r.model_id || "—"}</span>
+        <span class="k">version</span><span class="v">${S.artefact_version ?? "—"}</span>
+        <span class="k">draft</span><span class="v">${S.draft_filename || "—"}</span>
+        <span class="k">H2</span><span class="v">${S.h2_ok ? "fresh" : "pending/stale"}</span>
+        <span class="k">MonA</span><span class="v">${S.mon_session || "—"}</span>`;
+    }
+
+    function setLeaveDownloads(enabled) {
+      document.getElementById("btnDlDraft").disabled = !enabled;
+      document.getElementById("btnDlPack").disabled = !enabled;
+      document.getElementById("leaveSuccess").classList.toggle("show", enabled);
+    }
+
+    async function api(path, body) {
+      const opt = body === undefined
+        ? { method: "GET" }
+        : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) };
+      const res = await fetch(API + path, opt);
+      let data = {};
+      try { data = await res.json(); } catch (_) {}
+      if (!res.ok) {
+        const detail = data.detail || data;
+        const errCode = detail.error || detail.message || detail.reason || ("http_" + res.status);
+        log("DENY " + path, detail);
+        pushDeny(errCode);
+        setBanner("Denied: " + errCode, "bad");
+        throw Object.assign(new Error("api"), { detail, status: res.status });
+      }
+      log("OK " + path, data.ok === false ? data : { ok: true, keys: Object.keys(data).slice(0, 8) });
+      return data;
+    }
+
+    async function startTask(taskType) {
+      document.getElementById("taskType").value = taskType;
+      const data = await api("/task/start", { task_type: taskType, user_id: "desk-operator" });
+      S.grant_id = data.grant_id;
+      S.task_id = data.task_id;
+      S.route = data.route;
+      S.draft_filename = null;
+      S.artefact_version = null;
+      S.h7_acked = false;
+      S.h2_ok = false;
+      S.maxStep = 1;
+      setLeaveDownloads(false);
+      paintMonB();
+      enterWorkbench();
+      advanceTo(1);
+      const g1 = data.route?.model_id
+        ? ` · model ${data.route.model_id} (G1 floor may share model_id)`
+        : "";
+      setBanner(`Task started · card ${data.route.card_id}${g1}`, "ok");
+    }
+
+    /* —— Hero —— */
+    document.getElementById("btnHeroStart").onclick = () => startTask("inspection");
+    document.getElementById("btnHeroCoding").onclick = () => startTask("coding");
+
+    /* —— Intent —— */
+    document.getElementById("btnStart").onclick = async () => {
+      await startTask(document.getElementById("taskType").value);
+    };
+
+    document.getElementById("btnMonStart").onclick = async () => {
+      const data = await api("/monitor-a/start", {});
+      S.mon_session = data.session_id;
+      paintMonB();
+      setBanner("Monitor A start snapshot — evidence pack, not CERT.", "ok");
+    };
+    document.getElementById("btnMonStop").onclick = async () => {
+      const data = await api("/monitor-a/stop?session_id=" + encodeURIComponent(S.mon_session || ""), {});
+      setBanner(`Monitor A stop · sha256 ${(data.pack?.sha256 || "").slice(0, 12)}… — not CERT.`, "ok");
+    };
+
+    /* —— Files —— */
+    document.getElementById("btnLoadFx").onclick = () => {
+      document.getElementById("extract").value = FX_EXTRACT;
+      S.fixtureLoaded = true;
+      document.getElementById("filesStatus").textContent = "FX-EXT-01 loaded (Confidential synthetic).";
+      setBanner("Fixture FX-EXT-01 loaded.", "ok");
+      S.maxStep = Math.max(S.maxStep, 2);
+    };
+    document.getElementById("btnFilesNext").onclick = () => {
+      if (!S.fixtureLoaded) {
+        document.getElementById("extract").value = FX_EXTRACT;
+        S.fixtureLoaded = true;
+      }
+      advanceTo(2);
+      setBanner("Review extract, then confirm H1.", null);
+    };
+
+    /* —— H1 —— */
+    document.getElementById("btnH1").onclick = async () => {
+      await api("/task/h1-confirm", {
+        grant_id: S.grant_id,
+        extract_text: document.getElementById("extract").value,
+        h1_acked: true
+      });
+      advanceTo(3);
+      setBanner("H1 confirmed — extract accepted by same user.", "ok");
+    };
+
+    /* —— Knowledge —— */
+    document.getElementById("btnRetrieve").onclick = async () => {
+      const data = await api("/task/retrieve", {
+        grant_id: S.grant_id,
+        query: document.getElementById("query").value,
+        k: 5
+      });
+      const cites = (data.cites || []).map((c) => `${c.path}: ${c.snippet}`).join("\n") || data.verdict || "NOT FOUND";
+      document.getElementById("citesBox").textContent = cites;
+      S.maxStep = Math.max(S.maxStep, 3);
+      setBanner(
+        data.verdict === "NOT FOUND" ? "Retrieve: NOT FOUND (honest)." : "Cites returned — ack H7 before draft.",
+        data.verdict === "NOT FOUND" ? "warn" : "ok"
+      );
+    };
+    document.getElementById("btnH7").onclick = async () => {
+      S.h7_acked = true;
+      try {
+        await api("/task/h7-ack", { grant_id: S.grant_id, h7_acked: true });
+      } catch (_) {
+        /* client flag kept if server H7 not yet wired */
+      }
+      advanceTo(4);
+      setBanner("H7 acknowledged (own-work cite review).", "ok");
+    };
+
+    /* —— DRAFT —— */
+    document.getElementById("btnDraft").onclick = async () => {
+      const data = await api("/task/inspect-draft", {
+        grant_id: S.grant_id,
+        title: "Inspection thickness note (DRAFT)",
+        findings: document.getElementById("findings").value,
+        query_for_cites: document.getElementById("query").value,
+        h7_acked: S.h7_acked
+      });
+      S.draft_filename = data.filename;
+      S.artefact_version = data.artefact_version;
+      S.h2_ok = false;
+      document.getElementById("draftMeta").textContent =
+        `${data.filename} · v${data.artefact_version} · ${data.cite_verdict || ""}`;
+      paintMonB();
+      advanceTo(5);
+      setBanner(`DRAFT ready · artefact_version ${data.artefact_version}`, "ok");
+    };
+    document.getElementById("btnEdit").onclick = async () => {
+      const findings = document.getElementById("findings").value + " [edited]";
+      document.getElementById("findings").value = findings;
+      const data = await api("/task/draft-edit", {
+        grant_id: S.grant_id,
+        draft_filename: S.draft_filename,
+        findings
+      });
+      S.artefact_version = data.artefact_version;
+      S.h2_ok = false;
+      paintMonB();
+      setBanner("Material edit — H2 stale. Re-check before export leave.", "warn");
+    };
+
+    /* —— Gates —— */
+    document.getElementById("btnH2").onclick = async () => {
+      await api("/task/h2-ack", {
+        grant_id: S.grant_id,
+        draft_filename: S.draft_filename,
+        artefact_version: S.artefact_version
+      });
+      S.h2_ok = true;
+      paintMonB();
+      advanceTo(6);
+      setBanner("H2 self-check fresh for current artefact_version.", "ok");
+    };
+    document.getElementById("btnSandboxOk").onclick = async () => {
+      await api("/sandbox/calc", { grant_id: S.grant_id, expression: "8.0 - 7.6" });
+      setBanner("Sandbox calc recorded — H9 required before export if continuing coding path.", "ok");
+    };
+    document.getElementById("btnSandboxRed").onclick = async () => {
+      await api("/sandbox/python", { grant_id: S.grant_id, source: "raise SystemExit(1)" });
+      setBanner("Sandbox red recorded — export leave must deny (G10).", "warn");
+    };
+    document.getElementById("btnH9").onclick = async () => {
+      await api("/task/h9-ack", { grant_id: S.grant_id, accept: true });
+      setBanner("H9 accepted.", "ok");
+    };
+    document.getElementById("btnInjectSecret").onclick = async () => {
+      try {
+        const data = await api("/task/export-check", {
+          text: "AKIAIOSFODNN7EXAMPLE secret_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+        });
+        if (data.ok === false) {
+          pushDeny(data.error || "secret_in_draft");
+          setBanner("G9 inject: " + (data.error || "secret_in_draft") + " — export would deny.", "bad");
+        } else {
+          setBanner("export-check clean (unexpected for inject).", "warn");
+        }
+      } catch (_) {}
+    };
+    document.getElementById("btnInjectModel").onclick = async () => {
+      try {
+        await api("/gateway/chat", {
+          grant_id: S.grant_id,
+          model: "gpt-4-public-not-allowed",
+          messages: [{ role: "user", content: "ping" }]
+        });
+      } catch (_) {
+        /* banner already set by api() */
+      }
+    };
+    document.getElementById("btnRevoke").onclick = async () => {
+      await api("/task/revoke", { grant_id: S.grant_id });
+      setBanner("Grant revoked — further tools must deny (G7).", "warn");
+      try { await api("/task/retrieve", { grant_id: S.grant_id, query: "x" }); }
+      catch (_) {}
+    };
+
+    /* —— Export —— */
+    document.getElementById("btnExport").onclick = async () => {
+      const data = await api("/task/export", {
+        grant_id: S.grant_id,
+        draft_filename: S.draft_filename,
+        h2_acked: true,
+        artefact_version: S.artefact_version
+      });
+      setLeaveDownloads(true);
+      setBanner(
+        `Export leave OK — ${data.filename}. Download DRAFT / leave pack (not CERT · no forward-accept).`,
+        "ok"
+      );
+    };
+    document.getElementById("btnDlDraft").onclick = () => {
+      if (!S.draft_filename) return;
+      const q = S.grant_id ? `?grant_id=${encodeURIComponent(S.grant_id)}` : "";
+      const a = document.createElement("a");
+      a.href = `/artifacts/${encodeURIComponent(S.draft_filename)}${q}`;
+      a.download = S.draft_filename;
+      a.rel = "noopener";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    };
+    document.getElementById("btnDlPack").onclick = () => {
+      if (!S.grant_id || !S.draft_filename) return;
+      const url =
+        `/task/leave-pack?grant_id=${encodeURIComponent(S.grant_id)}` +
+        `&draft_filename=${encodeURIComponent(S.draft_filename)}`;
+      window.open(url, "_blank", "noopener");
+    };
+
+    /* —— Monitor B: live audit —— */
+    let lastAuditFingerprint = "";
+    async function pollAudit() {
+      if (!S.started) return;
+      try {
+        const res = await fetch(API + "/audit/recent?limit=12");
+        if (!res.ok) return;
+        const data = await res.json();
+        const events = data.events || data.items || (Array.isArray(data) ? data : []);
+        if (!Array.isArray(events) || !events.length) return;
+        const fp = JSON.stringify(events[0]);
+        if (fp === lastAuditFingerprint) return;
+        lastAuditFingerprint = fp;
+        const denyCodes = [];
+        const lines = events.slice(0, 12).map((e) => {
+          const t = e.ts || e.time || "";
+          const name = e.event || e.type || e.action || "?";
+          const err = e.error || e.reason || (e.detail && e.detail.error) || "";
+          if (err) denyCodes.push(err);
+          return `${t} ${name}${err ? " · " + err : ""}`;
+        });
+        if (denyCodes.length) {
+          S.lastDenies = [...new Set(denyCodes.concat(S.lastDenies))].slice(0, 6);
+          paintDenies();
+        }
+        const auditEl = document.getElementById("log");
+        const kept = auditEl.textContent.split("\n").filter((l) => l.startsWith("OK ") || l.startsWith("DENY "));
+        auditEl.textContent = (kept.join("\n") + (kept.length ? "\n" : "") + "--- audit ---\n" + lines.join("\n")).trim();
+        auditEl.scrollTop = auditEl.scrollHeight;
+      } catch (_) { /* optional endpoint */ }
+    }
+
+    (async () => {
+      paintSteps();
+      paintMonB();
+      paintDenies();
+      try {
+        const h = await api("/health");
+        const line = `${h.product} · ${h.bind} · v${h.version}\nOllama inference-only · no pull`;
+        document.getElementById("healthMeta").textContent = line;
+        document.getElementById("wbHealth").textContent = `${h.bind} · v${h.version} · Ollama inference-only`;
+      } catch (e) {
+        document.getElementById("healthMeta").textContent = "API offline — start uvicorn on :8080";
+        document.getElementById("wbHealth").textContent = "API offline";
+      }
+      setInterval(pollAudit, 4000);
+    })();
+  </script>
+</body>
+</html>

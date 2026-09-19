@@ -1,0 +1,42 @@
+DALL-E 3. Widescreen 1792x1024. Highest quality. Pure white #FFFFFF PowerPoint body. Flat 2D vector. Navy #1F497D bars. Black text on white/light cards. No dark full-height KPI panel. No photo. No app UI. No SIH logo. No blur.
+
+Layout: TOP 58% height split LEFT 58% / RIGHT 42%. BOTTOM 42% height three equal benefit cards. 3% margin. Fill panels with explanation, not empty icons.
+
+TOP-LEFT. Navy bar exact:
+"Potential impact on the target audience"
+2-column table, 4 rows, wrapped sentences. Headers exact: "Who" | "What changes for them"
+"Primary: inspection / integrity engineer" | "Uploads a scan, checks a JSON fact sheet, downloads a DRAFT Word recommendation note and Excel thickness sheet. They still approve. The tool does not FFS or shut down a unit."
+"Secondary: process, HSE, maintenance, IT security" | "Same workbench later: deviation notes, MOC checklists, sandbox calcs. Security gets an on-prem audit log instead of shadow ChatGPT."
+"Org context (not our user count): MRPL 15.0 MMTPA; 2,530 staff (31 Mar 2025)" | "Confidential P&IDs and vendor files stay on the LAN. Reuse the mid-range GPU already on site."
+"Replication: other refinery / PSU / defence-linked plants" | "Same OpenAI-compatible /v1 socket. Swap templates and EAM schema. No rewrite of the workbench."
+
+TOP-RIGHT. Two stacked white cards with navy bars. Do NOT put a KPI scorecard here.
+
+Upper card. Bar exact: "How it benefits the user"
+Exact bullets:
+"• Stops retyping thicknesses from paper/PDF into Word."
+"• Every millimetre is cited or marked NOT FOUND — no silent hallucination in the note."
+"• Corrosion rate is calculated in a sandbox with the formula shown; the model does not invent CR."
+"• Coding tasks come back with pytest pass/fail, not untested snippets."
+"• Time: scanned pack today 1-5 days elapsed → target 2-3 hours to a DRAFT (our workflow estimate, not an MRPL SLA). Judgement stays human."
+"• No need to paste P&IDs into Claude/Codex to 'just finish the note'."
+
+Lower card. Bar exact: "How we implement (phase-wise)"
+Exact lines:
+"P0 (now): official 6-slide idea PDF. Architecture locked. No fake live URL."
+"P1 (portal / 36h): one REAL loop — scan → OCR → HITL JSON → sandbox CR → Word+Excel; plus sandbox pytest; two model ids; WAN log = 0. EAM is mock JSON."
+"P2 (pilot, post-SIH): read-only plant EAM/DMS APIs, more skills (MOC, RCA, TBE), SSO, SIEM sink, plant templates. PPT generation starts here if the org wants it."
+"P3 (org scale): larger staged open-weight models, more GPUs, same /v1. HITL and DRAFT never removed. Never write DCS/SIS/PLC."
+
+BOTTOM. Official benefits pointer. Three equal cards:
+
+"Benefits of the solution (social)"
+"Cut shadow use of public GenAI on confidential drawings. Cisco 2024 (n=2600, 12 countries): 48% of organisations admitted pasting non-public data; 27% banned GenAI for a time. Cyberhaven Q2 2024: 73.8% of workplace ChatGPT accounts were non-corporate. These are vendor surveys, not MRPL measurements."
+
+"Benefits of the solution (economic)"
+"Attack find-and-type cost (about 50-70% of elapsed time in our study), not headcount. Reuse the RTX 4060 8 GB card — no H100 purchase for the prototype. No crore savings claimed. IndiaAI Mission rupees are national compute (slide 6), not KWB revenue."
+
+"Benefits of the solution (environmental + policy)"
+"No extra model-training run. We do not claim on-prem inference is greener than cloud. The honest claim: P&IDs never take a cloud round-trip; hardware already bought is reused. DPDP-shaped: no external processor. CERT-In-shaped: 180-day on-prem ICT logs. Not a legal opinion."
+
+Do not draw a clock/KPI icon panel. Do not write 2,530 users of our app. Spell HITL, OCR, /v1, DCS, SIS.

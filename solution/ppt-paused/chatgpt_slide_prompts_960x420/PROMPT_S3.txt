@@ -1,0 +1,34 @@
+Create a 960 by 420 PNG. Exact size 960×420.
+
+READ AND OBEY SHARED_RULES.txt (Rev 2.2) first.
+This image = TECHNICAL APPROACH (stack candidates + planes + one loop).
+
+REGION A — Technologies — C1–C9, R1–R4
+Bar: "Technologies / stack (candidates — not locked)"
+Headers: "Layer" | "Tech (candidate)" | "Purpose"
+Exactly SIX data rows:
+Row1: "Workbench" | "App services" | "Session, grants, orch, skills, HITL, gates, audit"
+Row2: "Gateway" | "OpenAI-shape → local /v1 only" | "Verify grant+card+schema; ONLY runtime socket"
+Row3: "Runtime" | "llama.cpp / vLLM / Ollama /v1" | "Open-weight serve; quant; LRU; GPU probe"
+Row4: "Ingest + Cards" | "OCR/VLM + Model Cards" | "Pre-LLM extract; H1; pluggable model ids"
+Row5: "Retrieve + Files" | "Lexical must; python-docx" | "Authz-first k=5; DRAFT Word (Excel/PPT = LATER)"
+Row6: "Sandbox" | "Podman/Docker none OR process jail" | "Verify code/calc; de-Docker; ≠ GPU"
+
+REGION B — Hard split — C10–C12, R1–R4
+Bar: "Hard split"
+Three cards exact:
+"WORKBENCH — no weight files"
+"RUNTIME — weights + /v1"
+"SANDBOX — verify only; never wraps GPU"
+Footer exact:
+"USB offline stage for weights/packs"
+
+REGION C — Methodology — C1–C12, R5–R6
+Bar: "Methodology / process flow"
+ONE strip — labels MUST MATCH Idea slide exactly:
+"Grant" → "Orch+Card" → "Ingest/H1" → "Authz retrieve" → "Pack" → "Gateway" → "Runtime" → "Gates" → "Word DRAFT" → "HITL" → "Audit"
+Callout exact:
+"Multiple roles; auto-pick by task; mid-GPU loads ONE model at a time; two model_ids prove auto-select. Fail-closed on gateway/audit deny."
+
+Spell: Knowledge Work Bench, Authz retrieve, python-docx, Model Cards, de-Docker, /v1.
+No Flask+Django+FastAPI salad. No locking one serving brand as the product.

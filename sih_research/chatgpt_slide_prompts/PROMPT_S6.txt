@@ -1,0 +1,43 @@
+DALL-E 3. Widescreen 1792x1024. Highest quality. Pure white #FFFFFF PowerPoint body. Flat 2D vector. Navy #1F497D bars. Black text. Sharp large type. No photo. No UI. No dark background. No blur. No "Click Here". Product name is exactly "KWB". Do not write [PRODUCT_NAME]. Do not write the word "Others". Do not write "You vs existing".
+
+LEFT 50% width, top 72% height. Navy bar exact:
+"Details / Links of the reference and research work"
+Grouped bullets, exact wording:
+
+"Problem and org"
+"• SIH26117 Expected Solution (MRPL): inspection scan to Word, sandbox-verified code, on-device OCR/vision, visible zero-egress log."
+"• MRPL: 15.0 MMTPA Category-1 Miniratna, ONGC subsidiary — mrpl.co.in/Content/Profile and mopng.gov.in."
+
+"Government and policy"
+"• OISD-STD-128 Inspection of Unfired Pressure Vessels (name/edition only) — oisd.gov.in."
+"• CERT-In Direction 20(3)/2022: rolling 180-day ICT logs."
+"• Digital Personal Data Protection Act, 2023 (processor control; not a universal air-gap statute)."
+"• IndiaAI Mission, Cabinet 07 Mar 2024, Rs.10,371.92 crore, 10,000+ GPUs — PIB PRID 2012355."
+"• NIST AI 600-1 Generative AI Profile (July 2024)."
+
+"Papers (methods we use; we did not re-run the experiments)"
+"• Yao et al., ReAct, 2022, arXiv:2210.03629 — plan, act, observe."
+"• Schick et al., Toolformer, 2023, arXiv:2302.04761 — when to call tools."
+"• Lewis et al., RAG, 2020, arXiv:2005.11401 — ground in local files, not the public web."
+"• Pfitzmann et al., DocLayNet, KDD 2022, arXiv:2206.01062 — layout research; not KWB OCR accuracy."
+
+"Open source we compose (not forks)"
+"• llama.cpp / Ollama / vLLM as OpenAI-compatible /v1; Tesseract or PaddleOCR; python-docx; openpyxl; Docker --network=none; Agent Skills spec agentskills.io."
+"• NASSCOM: India AI market ~USD 8 bn (2025) is ecosystem context, not KWB TAM."
+
+RIGHT 50% width, top 72% height. Navy bar exact:
+"KWB compared with existing tools (ticks only if true)"
+Table 5 columns, 4 rows. First column values exact. Headers exact:
+"System" | "Air-gap proof" | "Sandbox tests" | "HITL before Word" | "Word/Excel from fields"
+"KWB" | "Y (WAN log)" | "Y" | "Y" | "Y"
+"ChatGPT / Copilot / Claude" | "N" | "N" | "N" | "cloud files"
+"Open WebUI + Ollama" | "local possible" | "N" | "weak" | "chat"
+"PrivateGPT / AnythingLLM" | "often local" | "N" | "weak" | "RAG chat"
+
+Do not add OpenHands, Continue, Azure, IBM, or a row named Others.
+
+BOTTOM 28% height, full width. Two lines on a navy bar, white text, no word "Others":
+"KWB difference: a PSU inspection workbench — cited millimetres, sandbox corrosion rate, HITL JSON, DRAFT Word+Excel, WAN log = 0 — on an RTX 4060 8 GB sequential 7B, not a cloud chat and not a local chat UI."
+"SIH 2026 screening: nine named criteria; no published percentage weights. PPT is later; 36h artefacts are Word and Excel only."
+
+Spell KWB, SIH26117, OISD-STD-128, CERT-In, DPDP, ReAct, Toolformer, DocLayNet. Do not write 99% OCR. Do not tick PPT for KWB.

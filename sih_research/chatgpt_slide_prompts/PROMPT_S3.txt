@@ -1,0 +1,31 @@
+DALL-E 3. Widescreen 1792x1024. Highest quality. Pure white #FFFFFF PowerPoint background. Flat 2D vector infographic. Large navy #1F497D bars and text. No photo. No app UI. No dark theme. No SIH logo. No blur.
+
+TOP 48% of the image. Navy bar exact:
+"Technologies to be used (e.g. programming languages, frameworks, hardware)"
+Table, 3 columns, 6 rows, LARGE readable type. Headers exact: "Layer" | "Tech" | "Purpose"
+"Workbench Laptop B" | "Python 3 + FastAPI" | "Route, HITL, audit. 3050 not for LLM."
+"Runtime Laptop A" | "OpenAI /v1 (llama.cpp or Ollama or vLLM)" | "One 7B Q4 on RTX 4060 8 GB."
+"OCR" | "Tesseract / PaddleOCR CPU" | "Scan to text. Fail closed."
+"Skills" | "On-disk SKILL.md" | "extract, calc, draft, code, policy."
+"Jail" | "Docker --network=none" | "CR + pytest. Not the GPU."
+"Files" | "python-docx, openpyxl, JSON" | "Word+Excel from approved fields."
+
+BOTTOM-LEFT 65% width. Navy bar exact:
+"Methodology and process for implementation (Flow Charts/Images/ working prototype)"
+One row of 7 rounded boxes + arrows, labels exact:
+"Scan" "OCR" "Extract /v1" "HITL JSON" "CR in jail" "Draft /v1" "Word DRAFT"
+Second smaller row of 3 boxes:
+"code_sandbox" "pytest" "pass/fail"
+Caption exact: "CR = (t_prev - t_curr)/dt. LLM does not invent mm. Missing = NOT FOUND."
+
+BOTTOM-RIGHT 35% width. Light-yellow rounded card, navy outline. Title exact:
+"8 GB routing rule"
+Lines exact:
+"Many roles, one system."
+"Pick by task, not VRAM."
+"Load one model at a time."
+"Log two model ids."
+"Venue GPU: change base_url."
+"No Docker? WSL jail (weaker)."
+
+No laptop screenshots. No logo salad. Spell FastAPI, Tesseract, python-docx, openpyxl exactly.

@@ -1,0 +1,21 @@
+══════════════════════════════════════════════════════════════════
+SHARED RULES (Rev 2.2 — from PPT_PROMPTS_REDTEAM) — obey on every slide
+══════════════════════════════════════════════════════════════════
+Canvas: EXACT 960×420 px. White #FFFFFF. No SIH logo/brain/footer/chrome.
+Product name ALWAYS: Knowledge Work Bench
+Grid 12×6 is LAYOUT AID ONLY — do NOT draw grid lines in final art.
+x edges: 0,80,160,240,320,400,480,560,640,720,800,880,960
+y edges: 0,70,140,210,280,350,420
+Style: navy #1F497D · accent #0070C0 · OK #548235 · warn #C0504D · text #1A1A1A
+Flat 2D. No paragraphs. No robots. No neural-net clipart. No decorative icons.
+
+REJECT / REGENERATE if any of these appear:
+- Excel or PPT claimed as must-work
+- CERT-In / DPDP "certified" or compliance badge
+- 99% OCR · fake URL/QR · plant ₹crore savings · dual-70B in VRAM
+- Internal labels WP-00…WP-24
+- Blank or bracket Team ID on a final export (S1)
+- Visible grid lines in the PNG
+
+LOOP LABELS (identical on Idea + Technical — use exactly):
+Grant → Orch+Card → Ingest/H1 → Authz retrieve → Pack → Gateway → Runtime → Gates → Word DRAFT → HITL → Audit

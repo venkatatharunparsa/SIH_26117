@@ -1,0 +1,8 @@
+# Confidential synthetic — SIH demo only. Not real plant SoR.
+
+SOP-THK-001 Inspection of pressure vessel shell thickness.
+
+Acceptance: minimum thickness 8.0 mm for vessel V-101 shell course A.
+If measured thickness < 8.0 mm, draft recommendation: reduce inspection interval and notify integrity engineer.
+Reference: synthetic plant standard PS-NDT-12 (demo only).
+Keywords: thickness vessel inspection NDT shell.

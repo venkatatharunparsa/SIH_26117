@@ -1,0 +1,36 @@
+Create a 960 by 420 PNG. Exact size 960×420.
+
+READ AND OBEY SHARED_RULES.txt (Rev 2.2) first.
+This image = IMPACT AND BENEFITS (audience + ONE KPI + thin benefits).
+
+REGION A — Audience — C1–C7, R1–R3
+Bar: "Target audience / beneficiaries"
+Headers: "Who" | "What changes"
+Row1: "Primary — inspection / integrity engineer" | "DRAFT Word from scan; THEY approve"
+Row2: "Secondary — process, HSE, maintenance, IT security" | "Same workbench; more skills later"
+Row3: "Org context — MRPL-class CPSE (15.0 MMTPA; 2,530 staff @ 31 Mar 2025)" | "Cut shadow paste of P&IDs; reuse mid-range GPU"
+Row4: "Replication — other PSUs / defence-linked plants" | "Same architecture; swap templates & cards"
+Footnote exact:
+"15.0 MMTPA (mrpl.co.in). Staff 2,530 = Directors’ report 31 Mar 2025 — NOT app users."
+
+REGION B — KPI — C8–C12, R1–R3
+Solid navy card, white text, exact lines:
+"ONE KPI (labelled estimate)"
+"Scanned inspection pack"
+"today: 1–5 days elapsed"
+"→ target: 2–3 hours"
+"to a DRAFT Word"
+"Source: industry workflow study"
+"NOT an MRPL SLA"
+"Human still approves"
+"Not FFS / shutdown"
+
+REGION C — Benefits — C1–C12, R4–R6
+Bar: "Benefits (social / economic / environmental / policy)"
+Four lines exact (Cisco wording red-team fixed):
+"Social: Stop confidential drawings entering public AI. Cisco Privacy Benchmark 2024: 48% of respondents entered non-public company info into GenAI; 27% of organisations banned GenAI for a time (survey — not MRPL)."
+"Economic: Cut find-and-type time, not headcount. Reuse GPU already bought. No ₹crore savings claim."
+"Environmental: No extra training run; no cloud round-trip of P&IDs. Do NOT claim greener than cloud inference."
+"Policy-shaped (not legal opinion): on-prem prompts/logs (DPDP-shaped) + 180-day ICT logs (CERT-In-shaped). Controls help — not a certification badge."
+
+Spell: Knowledge Work Bench, 15.0 MMTPA, 2,530, 48%, 27%, DRAFT, DPDP, CERT-In.

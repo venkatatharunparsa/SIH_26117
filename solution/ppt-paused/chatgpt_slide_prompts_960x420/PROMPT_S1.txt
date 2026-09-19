@@ -1,0 +1,32 @@
+Create a 960 by 420 PNG. Exact size width=960 height=420.
+
+READ AND OBEY file SHARED_RULES.txt (Rev 2.2) first.
+This image = SIH26117 TITLE content panel only.
+
+REGION TITLE — C1–C8, R1–R6
+Exact lines:
+"Problem Statement ID – SIH26117"
+"Problem Statement Title – Sovereign On-Premise Agentic AI Workbench using Open-Weight Multimodal LLMs for Confidential Industrial Work"
+"Theme – Smart Automation"
+"PS Category – Software"
+"Team ID – ⟦TEAM_ID⟧"
+"Team Name – ⟦TEAM_NAME⟧"
+Muted footnote:
+"Organisation: Mangalore Refinery and Petrochemicals Limited (MRPL)"
+Wrap long title inside C1–C8 only. Never overflow into C9.
+
+REGION CHIP — C9–C12, R1–R3
+Navy card, white text, centered:
+"SOFTWARE"
+"Smart Automation"
+"SIH26117"
+
+REGION PRODUCT — C9–C12, R4–R6
+White card, 2px navy border, centered:
+"Knowledge Work Bench"
+"Offline workbench"
+"Not a chatbot"
+"Not a new LLM"
+
+Zero invented metrics. Zero QR. Zero URL.
+Spell: SIH26117, Knowledge Work Bench, MRPL.
