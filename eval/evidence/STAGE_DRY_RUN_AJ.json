@@ -1,0 +1,87 @@
+{
+  "ts": "2026-09-20T17:12:52.375471+00:00",
+  "walk": "inspection A\u2192J + fail-closed G9/G7",
+  "desk_primary": "apps/kwb-app (Electron) \u2014 not kwb-desk",
+  "monitor_a_not_cert": true,
+  "no_in_app_approver": true,
+  "pass": true,
+  "steps": {
+    "A_enter": {
+      "ok": true,
+      "health": "Knowledge Work Bench"
+    },
+    "J_monitor_a_start": {
+      "ok": true,
+      "session_id": "7a3ef08ad531",
+      "not_cert": true
+    },
+    "B_intent": {
+      "ok": true,
+      "task_type": "inspection",
+      "card_id": "inspect-draft",
+      "model_id": "llama3.2:3b",
+      "grant_id": "3a8d8792a375427d"
+    },
+    "C_D_extract_H1": {
+      "ok": true,
+      "fixture": "FX-EXT-01"
+    },
+    "E_retrieve_H7": {
+      "ok": true,
+      "cites": 5,
+      "h7": true
+    },
+    "F_draft": {
+      "ok": true,
+      "filename": "draft-e0fe268c02.docx",
+      "artefact_version": "ef8908f5b989a87c",
+      "status": "DRAFT"
+    },
+    "H_self_H2": {
+      "ok": true
+    },
+    "I_export_leave": {
+      "ok": true,
+      "export": {
+        "ok": true,
+        "path": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\artifacts\\draft-e0fe268c02.docx",
+        "filename": "draft-e0fe268c02.docx",
+        "status": "exported",
+        "artefact_version": "ef8908f5b989a87c",
+        "grant_revoked": true,
+        "note": "Solution ends at export leave \u2014 no forward-accept",
+        "downloads": {
+          "draft": "/artifacts/draft-e0fe268c02.docx?grant_id=3a8d8792a375427d",
+          "leave_pack": "/task/leave-pack?grant_id=3a8d8792a375427d&draft_filename=draft-e0fe268c02.docx"
+        }
+      }
+    },
+    "I_leave_pack": {
+      "ok": false,
+      "error": "HTTP Error 422: Unprocessable Content"
+    },
+    "J_monitor_a_stop": {
+      "ok": true,
+      "sha256": "664d24fa8ada99ad5471581cf597834a62ae39a004ef5e930168234d5a65bb0c",
+      "not_cert": true,
+      "path": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\artifacts\\monitor-a-7a3ef08ad531.json"
+    },
+    "fail_closed_G9_secret": {
+      "ok": true,
+      "denied": true,
+      "status": 400,
+      "body": {
+        "ok": false,
+        "error": "secret_in_draft",
+        "hits": [
+          "api_key_like",
+          "openai_sk_like"
+        ]
+      }
+    },
+    "fail_closed_G7_revoke": {
+      "ok": true,
+      "status": 403
+    }
+  }
+}

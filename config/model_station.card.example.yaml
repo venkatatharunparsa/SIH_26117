@@ -1,0 +1,41 @@
+# Model Station (Laptop-1) → Workbench (Laptop-2) Model Card handoff
+# Copy adopted values into config/models.yaml on Laptop-2. NEVER pull on stage.
+#
+# What jury hears:
+#   "Model Workstation issues a Model Card + station credential;
+#    Workbench calls inference using that card — assist→export leave stays on desk."
+
+station:
+  name: "KWB Model Workstation"
+  # Optional shared secret (not a cloud OpenAI key). Set same on L2:
+  #   station_token: "demo-station-2026"   # in models.yaml OR SOVEREIGN_STATION_TOKEN
+  station_token: "REPLACE_WITH_SHARED_DEMO_TOKEN"
+  # How L2 reaches L1:
+  #   Mode A (preferred): SSH tunnel → llm_base_url stays http://127.0.0.1:11434
+  #   Mode B (LAN): set llm_base_url to http://LAPTOP1_LAN_IP:11434 and allow host below
+  suggested_llm_base_url_tunnel: "http://127.0.0.1:11434"
+  suggested_llm_base_url_lan: "http://192.168.x.x:11434"
+  inference_allow_hosts_lan:
+    - "192.168.x.x"
+
+policy:
+  runtime: ollama
+  inference_only: true
+  no_pull: true
+  no_registry: true
+  adopt: local_tags_only
+  adopted_at: "REPLACE_DATE"
+  adopted_chat_tags:
+    - "llama3.2:3b"
+  not_adopted: []
+
+# Paste these cards into config/models.yaml on Laptop-2 (ids must match routing_rules.yaml)
+cards:
+  - id: inspect-draft
+    model_id: llama3.2:3b
+    enabled: true
+    task_families: [inspection]
+  - id: code-assist
+    model_id: llama3.2:3b
+    enabled: true
+    task_families: [coding]

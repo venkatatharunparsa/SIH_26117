@@ -1,0 +1,103 @@
+{
+  "ts": "2026-09-20T20:11:53Z",
+  "steps": [
+    {
+      "id": "catalog",
+      "ok": true,
+      "count": 10,
+      "has_noisy": true,
+      "has_multipage": true,
+      "has_png": true,
+      "has_pdf": true
+    },
+    {
+      "id": "png_noisy",
+      "file": "scan_vessel_V101_noisy.png",
+      "attach_ok": true,
+      "grant_id": "6bba6348f5bc40a7",
+      "phase": "await_confirm_extract",
+      "engine": "fixture_stub",
+      "live_ocr": false,
+      "degraded": true,
+      "ingest_message": "Tesseract OCR binary not found on PATH. Install from https://github.com/UB-Mannheim/tesseract/wiki (Windows) then restart the API. Until then demo can use fixtu",
+      "extract_len": 390,
+      "extract_preview": "- Confidential synthetic \u2014 SIH demo only. Not real plant SoR.\n- FX-EXT-01 \u2014 vessel thickness extract (H1 fixture)\n- Asset: V-101 shell course A\n- Measured thickness: 7.6 mm\n- Location: North quadrant, 1.2 m above grade\n-",
+      "key_hits": [
+        "7.6",
+        "V-101",
+        "SOP"
+      ],
+      "keys_ok": true,
+      "confirm_ok": true,
+      "confirm_phase": "await_review_cites",
+      "last_phase": "await_self_check",
+      "draft": "draft-7cb5b2634a.docx",
+      "draft_ok": true,
+      "ok": true,
+      "grade": "PASS"
+    },
+    {
+      "id": "pdf_multipage",
+      "file": "vessel_note_multipage.pdf",
+      "attach_ok": true,
+      "grant_id": "2080e6368cad4a77",
+      "phase": "await_confirm_extract",
+      "engine": "pypdf",
+      "live_ocr": false,
+      "degraded": false,
+      "ingest_message": "PDF text layer via pypdf (2 page(s))",
+      "extract_len": 241,
+      "extract_preview": "- Asset: V-101 shell course A\n- Measured thickness: 7.6 mm\n- SOP-THK-001 minimum allowable: 8.0 mm\n- Location: North quadrant, 1.2 m above grade\n- Raw notes: Pit indication near weld toe.\n- Operator: demo \u00b7 not a plant r",
+      "key_hits": [
+        "7.6",
+        "V-101",
+        "SOP-THK"
+      ],
+      "keys_ok": true,
+      "confirm_ok": true,
+      "confirm_phase": "await_review_cites",
+      "last_phase": "await_self_check",
+      "draft": "draft-3885fc38d4.docx",
+      "draft_ok": true,
+      "ok": true,
+      "grade": "PASS"
+    },
+    {
+      "id": "pdf_text_layer",
+      "file": "vessel_note_text.pdf",
+      "attach_ok": true,
+      "grant_id": "29d4e0c0bd0d49fa",
+      "phase": "await_confirm_extract",
+      "engine": "pypdf",
+      "live_ocr": false,
+      "degraded": false,
+      "ingest_message": "PDF text layer via pypdf (1 page(s))",
+      "extract_len": 173,
+      "extract_preview": "- Asset: V-101 shell course A\n- Location: North quadrant, 1.2 m above grade\n- Measured thickness: 7.6 mm\n- SOP-THK-001 minimum: 8.0 mm\n- Notes: Pit indication near weld toe.",
+      "key_hits": [
+        "7.6",
+        "V-101"
+      ],
+      "keys_ok": true,
+      "confirm_ok": true,
+      "confirm_phase": "await_review_cites",
+      "last_phase": "await_self_check",
+      "draft": "draft-452d03fd19.docx",
+      "draft_ok": true,
+      "ok": true,
+      "grade": "PASS"
+    },
+    {
+      "id": "fixture_traversal",
+      "ok": true,
+      "http": 404
+    }
+  ],
+  "health_ok": true,
+  "inference": "LOCAL (this Laptop-B Ollama)",
+  "summary": {
+    "pass": 3,
+    "partial": 0,
+    "fail": 0
+  }
+}

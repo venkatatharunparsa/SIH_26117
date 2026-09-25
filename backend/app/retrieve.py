@@ -17,9 +17,20 @@ from pathlib import Path
 from typing import Any
 
 from .audit import log_event
-from .config import DATA_DIR, SOP_DIR, ensure_dirs
+from .config import DATA_DIR, KB_DIR, KNOWLEDGE_DIR, ROOT, SOP_DIR, ensure_dirs
 
 FIXTURES = DATA_DIR / "fixtures"
+
+
+def _rel_label(path: Path) -> str:
+    """Stable cite path relative to repo root when possible."""
+    try:
+        return str(path.relative_to(ROOT)).replace("\\", "/")
+    except ValueError:
+        try:
+            return str(path.relative_to(DATA_DIR)).replace("\\", "/")
+        except ValueError:
+            return path.name
 
 
 def _iter_docs(shelves: list[str]) -> list[tuple[str, str]]:
@@ -29,6 +40,10 @@ def _iter_docs(shelves: list[str]) -> list[tuple[str, str]]:
         roots.append(FIXTURES)
     if "sop" in shelves:
         roots.append(SOP_DIR)
+    if "kb" in shelves:
+        roots.append(KB_DIR)
+    if "knowledge" in shelves:
+        roots.append(KNOWLEDGE_DIR)
     docs: list[tuple[str, str]] = []
     for root in roots:
         if not root.exists():
@@ -36,7 +51,12 @@ def _iter_docs(shelves: list[str]) -> list[tuple[str, str]]:
         for p in root.rglob("*"):
             if p.suffix.lower() in {".txt", ".md"} and p.is_file():
                 try:
-                    docs.append((str(p.relative_to(DATA_DIR)), p.read_text(encoding="utf-8", errors="ignore")))
+                    docs.append(
+                        (
+                            _rel_label(p),
+                            p.read_text(encoding="utf-8", errors="ignore"),
+                        )
+                    )
                 except OSError:
                     continue
     return docs

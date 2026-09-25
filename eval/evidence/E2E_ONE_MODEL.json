@@ -1,0 +1,331 @@
+{
+  "ts": "2026-09-20T19:28:17.424955+00:00",
+  "mode": "single_laptop_one_model",
+  "ok": true,
+  "adopted_chat_tags": [
+    "llama3.2:3b",
+    "qwen2.5-coder:7b"
+  ],
+  "inspection_model_id": "llama3.2:3b",
+  "inspection_card_id": "inspect-draft",
+  "coding_model_id": "qwen2.5-coder:7b",
+  "coding_card_id": "code-assist",
+  "g1_mode": "floor_single_tag_adopt",
+  "steps": [
+    {
+      "name": "health",
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "product",
+        "bind",
+        "runtime",
+        "llm_base_url",
+        "inference_target",
+        "inference_label",
+        "runtime_probe"
+      ]
+    },
+    {
+      "name": "start_inspection",
+      "method": "POST",
+      "path": "/task/start",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "task_id",
+        "grant_id",
+        "route"
+      ]
+    },
+    {
+      "name": "h1",
+      "method": "POST",
+      "path": "/task/h1-confirm",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "grant_id",
+        "extract_version",
+        "h1_acked"
+      ]
+    },
+    {
+      "name": "retrieve",
+      "method": "POST",
+      "path": "/task/retrieve",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "cites",
+        "verdict",
+        "k"
+      ]
+    },
+    {
+      "name": "h7",
+      "method": "POST",
+      "path": "/task/h7-ack",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "grant_id",
+        "h7_acked"
+      ]
+    },
+    {
+      "name": "inspect_draft",
+      "method": "POST",
+      "path": "/task/inspect-draft",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "path",
+        "filename",
+        "status",
+        "format",
+        "artefact_version",
+        "polished",
+        "cite_verdict"
+      ]
+    },
+    {
+      "name": "h2",
+      "method": "POST",
+      "path": "/task/h2-ack",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "filename",
+        "grant_id",
+        "artefact_version",
+        "findings",
+        "title",
+        "h2_acked_version",
+        "h2_stale"
+      ]
+    },
+    {
+      "name": "draft_edit",
+      "method": "POST",
+      "path": "/task/draft-edit",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "filename",
+        "grant_id",
+        "artefact_version",
+        "findings",
+        "title",
+        "h2_acked_version",
+        "h2_stale"
+      ]
+    },
+    {
+      "name": "export_stale_deny",
+      "method": "POST",
+      "path": "/task/export",
+      "status": 400,
+      "ok": true,
+      "body_keys": [
+        "detail"
+      ]
+    },
+    {
+      "name": "h2_after_edit",
+      "method": "POST",
+      "path": "/task/h2-ack",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "filename",
+        "grant_id",
+        "artefact_version",
+        "findings",
+        "title",
+        "h2_acked_version",
+        "h2_stale"
+      ]
+    },
+    {
+      "name": "export",
+      "method": "POST",
+      "path": "/task/export",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "path",
+        "filename",
+        "status",
+        "artefact_version",
+        "grant_revoked",
+        "note",
+        "downloads"
+      ]
+    },
+    {
+      "name": "artifact_download",
+      "method": "GET",
+      "path": "/artifacts/draft-c433915ae4.docx?grant_id=8092ebf7f2134f5d",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "bytes"
+      ]
+    },
+    {
+      "name": "leave_pack",
+      "method": "GET",
+      "path": "/task/leave-pack?grant_id=8092ebf7f2134f5d&draft_filename=draft-c433915ae4.docx",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "bytes"
+      ]
+    },
+    {
+      "name": "g8_bad_model",
+      "method": "POST",
+      "path": "/gateway/chat",
+      "status": 403,
+      "ok": true,
+      "body_keys": [
+        "detail"
+      ]
+    },
+    {
+      "name": "g9_secret",
+      "method": "POST",
+      "path": "/task/export-check",
+      "status": 400,
+      "ok": true,
+      "body_keys": [
+        "detail"
+      ]
+    },
+    {
+      "name": "start_coding",
+      "method": "POST",
+      "path": "/task/start",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "task_id",
+        "grant_id",
+        "route"
+      ]
+    },
+    {
+      "name": "g1_two_cards",
+      "ok": true,
+      "card_a": "inspect-draft",
+      "card_b": "code-assist",
+      "model_a": "llama3.2:3b",
+      "model_b": "qwen2.5-coder:7b",
+      "mode": "full_two_tag"
+    },
+    {
+      "name": "sandbox_calc",
+      "method": "POST",
+      "path": "/sandbox/calc",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "mode",
+        "exit_code",
+        "stdout",
+        "stderr",
+        "duration_ms",
+        "timeout_occurred",
+        "network"
+      ]
+    },
+    {
+      "name": "h9",
+      "method": "POST",
+      "path": "/task/h9-ack",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "grant_id",
+        "report",
+        "h9_acked",
+        "h9_decision"
+      ]
+    },
+    {
+      "name": "mon_a_start",
+      "method": "POST",
+      "path": "/monitor-a/start",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "session_id",
+        "start"
+      ]
+    },
+    {
+      "name": "mon_a_stop",
+      "method": "POST",
+      "path": "/monitor-a/stop?session_id=a6f03ad42a81",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "path",
+        "pack"
+      ]
+    },
+    {
+      "name": "start_for_revoke",
+      "method": "POST",
+      "path": "/task/start",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "task_id",
+        "grant_id",
+        "route"
+      ]
+    },
+    {
+      "name": "g7_revoke",
+      "method": "POST",
+      "path": "/task/revoke",
+      "status": 200,
+      "ok": true,
+      "body_keys": [
+        "ok",
+        "grant_id",
+        "status"
+      ]
+    },
+    {
+      "name": "g7_tool_deny",
+      "method": "POST",
+      "path": "/task/retrieve",
+      "status": 403,
+      "ok": true,
+      "body_keys": [
+        "detail"
+      ]
+    }
+  ]
+}

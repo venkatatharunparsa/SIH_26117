@@ -1,5 +1,7 @@
-# Task type → model card id (G1: ≥2 routes)
+# Task type → model card id (G1: ≥2 routes + multimodal)
 routes:
   inspection: inspect-draft
   coding: code-assist
+  vision: vision-scan
+  multimodal: vision-scan
   freestyle: general-fallback

@@ -84,7 +84,7 @@ Every module maps to flow A→J and WP. Brands = accepted baseline unless marked
 |---|---|---|
 | Intake allowlist | PDF/PNG/JPEG/WebP/TIFF/txt; fail-closed else | MIME sniff |
 | PDF text path | Selectable text extract + trust label | **pdfplumber / pypdf** (no AGPL unless licensed) |
-| OCR | Scans / empty pages | Tesseract; **ORG EXT:** PaddleOCR / VLM cards |
+| OCR | Scans / empty pages | **Org SoT (locked 2026-09-20):** **OCR model** (vision/neural). Demo day-1 stays on **framework** Tesseract/`pytesseract` + pypdf (+ fixture stub). Optional later: framework as fallback under the model path; VLM cards on org GPU |
 | Normalize | Extract artefact versioned | Internal schema |
 | H1 | Same-user confirm/correct | Hard gate |
 

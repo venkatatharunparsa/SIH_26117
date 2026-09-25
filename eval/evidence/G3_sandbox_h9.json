@@ -1,0 +1,32 @@
+{
+  "sandbox": {
+    "ok": true,
+    "mode": "process",
+    "exit_code": 0,
+    "stdout": "0.40000000000000036\n",
+    "stderr": "",
+    "duration_ms": 57,
+    "timeout_occurred": false,
+    "network": "host-process (no docker network; prefer offline)",
+    "command": "C:\\Python314\\python.exe C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\sandbox\\25836e20c326\\job.py",
+    "work_dir": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\sandbox\\25836e20c326"
+  },
+  "h9": {
+    "ok": true,
+    "grant_id": "cb1f939cffe045ce",
+    "report": {
+      "ok": true,
+      "mode": "process",
+      "exit_code": 0,
+      "stdout": "0.40000000000000036\n",
+      "stderr": "",
+      "duration_ms": 57,
+      "timeout_occurred": false,
+      "network": "host-process (no docker network; prefer offline)",
+      "command": "C:\\Python314\\python.exe C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\sandbox\\25836e20c326\\job.py",
+      "work_dir": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\sandbox\\25836e20c326"
+    },
+    "h9_acked": true,
+    "h9_decision": "accept"
+  }
+}

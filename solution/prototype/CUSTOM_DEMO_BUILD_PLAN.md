@@ -71,7 +71,7 @@ What kills the jury demo if we skip custom work (or fake maturity):
 | Run `execute_walk` → `eval/evidence/*` + **sign** checklist | execute ≥0.90 |
 | Demo runbook (operator cheat-sheet) | One-person stage |
 
-**Not required for demo:** React rewrite · full MCP · skill runner · OCR engine · SSO · Admin console · continuous Monitor A UI · Excel/PPT artefacts · more KWB pulls.
+**Not required for demo:** React rewrite · full MCP · skill runner · **OCR model** (org SoT — day-1 uses framework Tesseract/pypdf already) · SSO · Admin console · continuous Monitor A UI · Excel/PPT artefacts · more KWB pulls.
 
 ---
 
@@ -127,7 +127,7 @@ Only **OUR** code. No vendor pulls.
 | L1 | Custom React+Vite Claude-like canvas (study OpenHands Canvas vibe only) |
 | L2 | Full MCP host / FastMCP process / stdio-SSE |
 | L3 | Skill runner / progressive load into LLM |
-| L4 | Real OCR (Tesseract) beyond fixtures |
+| L4 | **OCR model** (org SoT) — demo already on Tesseract/pypdf framework + fixture stub |
 | L5 | Admin full console · SSO · Excel/PPT · hybrid vector · continuous WAN UI |
 
 ---

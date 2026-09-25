@@ -1,0 +1,189 @@
+{
+  "ts": "2026-09-20T07:26:43.815307+00:00",
+  "desk": "apps/kwb-app (Electron) \u2014 primary; legacy HTML at /desk/",
+  "g1_mode": "floor_single_tag_adopt",
+  "pass": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": true,
+    "G6": true,
+    "G7": true,
+    "G8": true,
+    "G9": true,
+    "G10": true
+  },
+  "monitor_a_not_cert": true,
+  "boundary": "assist\u2192export leave \u00b7 no forward-accept",
+  "results": {
+    "health": {
+      "ok": true,
+      "product": "Knowledge Work Bench",
+      "bind": "127.0.0.1:8080",
+      "runtime": "Ollama = inference only (demo) \u00b7 vLLM org \u2014 same /v1 contract",
+      "llm_base_url": "http://127.0.0.1:11434",
+      "ollama_policy": {
+        "inference_only": true,
+        "no_pull": true,
+        "no_registry": true,
+        "adopt": "local_tags_only",
+        "runtime": "ollama",
+        "adopted_at": "2026-09-19",
+        "adopted_chat_tags": [
+          "llama3.2:3b"
+        ],
+        "not_adopted": [
+          "nomic-embed-text:latest"
+        ]
+      },
+      "boundary": "assist\u2192export leave \u00b7 no forward-accept \u00b7 Monitor A \u2260 CERT",
+      "hitl": "self-HITL H1/H2/H3/H7/H9 \u00b7 artefact_version stale \u00b7 G10 sandbox-red",
+      "primary_desk": "apps/kwb-app",
+      "legacy_html_desk": "/desk/",
+      "desk": "apps/kwb-app",
+      "version": "0.5.0"
+    },
+    "G1": {
+      "routes": [
+        {
+          "task_type": "inspection",
+          "ok": true,
+          "card_id": "inspect-draft",
+          "model_id": "llama3.2:3b",
+          "card": {
+            "id": "inspect-draft",
+            "model_id": "llama3.2:3b",
+            "enabled": true,
+            "task_families": [
+              "inspection"
+            ]
+          },
+          "grant_id": "ac7d0f623e45472d"
+        },
+        {
+          "task_type": "coding",
+          "ok": true,
+          "card_id": "code-assist",
+          "model_id": "llama3.2:3b",
+          "card": {
+            "id": "code-assist",
+            "model_id": "llama3.2:3b",
+            "enabled": true,
+            "task_families": [
+              "coding"
+            ]
+          },
+          "grant_id": "cb1f939cffe045ce"
+        }
+      ],
+      "g1_mode": "floor_single_tag_adopt",
+      "distinct_cards": true
+    },
+    "G4_H1": {
+      "ok": true,
+      "grant_id": "ac7d0f623e45472d",
+      "extract_version": "35b8dc152c5ec192",
+      "h1_acked": true
+    },
+    "G6": {
+      "verdict": "cites",
+      "cite_count": 4
+    },
+    "G2": {
+      "filename": "draft-dad045cb33.docx",
+      "artefact_version": "96756606ebf791ac",
+      "status": "DRAFT"
+    },
+    "export_leave": {
+      "ok": true,
+      "path": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\artifacts\\draft-dad045cb33.docx",
+      "filename": "draft-dad045cb33.docx",
+      "status": "exported",
+      "artefact_version": "96756606ebf791ac",
+      "note": "Solution ends at export leave \u2014 no forward-accept",
+      "downloads": {
+        "draft": "/artifacts/draft-dad045cb33.docx?grant_id=ac7d0f623e45472d",
+        "leave_pack": "/task/leave-pack?grant_id=ac7d0f623e45472d&draft_filename=draft-dad045cb33.docx"
+      }
+    },
+    "G5": {
+      "path": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\artifacts\\monitor-a-4ddadc70a79a.json",
+      "sha256": "c86b3c3752a10c9aed17edeb5b3cf4beb313ec82b25c8447f35e055b9a63f123",
+      "not_cert": true
+    },
+    "G3_H9": {
+      "sandbox": {
+        "ok": true,
+        "mode": "process",
+        "exit_code": 0,
+        "stdout": "0.40000000000000036\n",
+        "stderr": "",
+        "duration_ms": 57,
+        "timeout_occurred": false,
+        "network": "host-process (no docker network; prefer offline)",
+        "command": "C:\\Python314\\python.exe C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\sandbox\\25836e20c326\\job.py",
+        "work_dir": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\sandbox\\25836e20c326"
+      },
+      "h9": {
+        "ok": true,
+        "grant_id": "cb1f939cffe045ce",
+        "report": {
+          "ok": true,
+          "mode": "process",
+          "exit_code": 0,
+          "stdout": "0.40000000000000036\n",
+          "stderr": "",
+          "duration_ms": 57,
+          "timeout_occurred": false,
+          "network": "host-process (no docker network; prefer offline)",
+          "command": "C:\\Python314\\python.exe C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\sandbox\\25836e20c326\\job.py",
+          "work_dir": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\sandbox\\25836e20c326"
+        },
+        "h9_acked": true,
+        "h9_decision": "accept"
+      }
+    },
+    "G10": {
+      "detail": {
+        "error": "sandbox_red_export_denied",
+        "message": "G10 \u2014 sandbox-red blocks export leave"
+      }
+    },
+    "G9": {
+      "status": 400,
+      "body": {
+        "ok": false,
+        "error": "secret_in_draft",
+        "hits": [
+          "api_key_like",
+          "openai_sk_like"
+        ]
+      }
+    },
+    "G8": {
+      "status": 403,
+      "body": {
+        "ok": false,
+        "error": "gateway_deny",
+        "reason": "model_not_on_card",
+        "model": "gpt-4o"
+      },
+      "pass": true
+    },
+    "G7": {
+      "detail": {
+        "ok": false,
+        "error": "grant_revoked",
+        "grant_id": "325ae7f891784d3e"
+      }
+    },
+    "audit_chain": {
+      "ok": true,
+      "entries": 340,
+      "skipped_legacy": 0,
+      "tip": "c2a65eefc86c1d0284c2b231b40a7ba516c0ba0dc7d78febfb3f25074ac201e6",
+      "not_cert": true
+    }
+  }
+}

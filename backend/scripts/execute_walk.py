@@ -204,9 +204,13 @@ def main() -> int:
 
     # G9 secret
     st, sec = post("/task/export-check", {"text": "api_key=sk-abcdefghijklmnopqrstuvwxyz"})
-    assert st == 200 and sec.get("ok") is False, sec
-    results["G9"] = sec
-    save("G9_secret_deny.json", sec)
+    # Prefer HTTP 4xx; accept legacy body deny if detail nested
+    detail = sec.get("detail") if isinstance(sec, dict) else None
+    body = detail if isinstance(detail, dict) else sec
+    g9_ok = (st >= 400) or (isinstance(body, dict) and body.get("ok") is False)
+    assert g9_ok, sec
+    results["G9"] = {"status": st, "body": body}
+    save("G9_secret_deny.json", results["G9"])
 
     # G8 bad model
     st, t8 = post("/task/start", {"task_type": "inspection", "user_id": "g8"})
@@ -219,12 +223,14 @@ def main() -> int:
             "messages": [{"role": "user", "content": "hi"}],
         },
     )
+    detail = bad.get("detail") if isinstance(bad, dict) else None
+    body = detail if isinstance(detail, dict) else bad
     g8_ok = (st >= 400) or (
-        isinstance(bad, dict)
-        and (bad.get("ok") is False or bad.get("error") == "gateway_deny")
+        isinstance(body, dict)
+        and (body.get("ok") is False or body.get("error") == "gateway_deny")
     )
     assert g8_ok, bad
-    results["G8"] = {"status": st, "body": bad, "pass": True}
+    results["G8"] = {"status": st, "body": body, "pass": True}
     save("G8_deny.json", results["G8"])
 
     # G7 revoke
@@ -243,7 +249,7 @@ def main() -> int:
 
     summary = {
         "ts": ts,
-        "desk": "http://127.0.0.1:8080/desk/",
+        "desk": "apps/kwb-app (Electron) — primary; legacy HTML at /desk/",
         "g1_mode": g1["g1_mode"],
         "pass": {
             "G1": True,

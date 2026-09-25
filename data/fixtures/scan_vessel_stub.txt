@@ -1,7 +1,10 @@
 # Confidential synthetic — SIH demo only. Not real plant SoR.
-# FX-SCAN-01 — attached “scan” stub for inspection walk (metadata only)
+# FX-SCAN-01 — metadata for the inspection scan package
 
-filename: scan_vessel_V101_stub.pdf
-content_type: application/pdf
-note: Day-1 demo uses FX-EXT-01 extract instead of real OCR on this stub.
+filename: scan_vessel_V101.png
+content_type: image/png
+companion_pdf: vessel_note_text.pdf
+note: Prefer attaching scan_vessel_V101.png (Tesseract) or vessel_note_text.pdf (pypdf).
+      If Tesseract is missing, PNG attach falls back to extract_vessel_h1.md fixture stub
+      and is labeled NOT live OCR.
 label: Confidential synthetic

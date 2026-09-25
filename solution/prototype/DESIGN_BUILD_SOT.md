@@ -10,7 +10,7 @@
 | **B2** | Fixture extract + H1 API | FX-EXT-01 · `POST /task/h1-confirm` | **DONE** |
 | **B3** | H9 → export deny if sandbox-red | `artefacts.py` · export G10 | **REAL** |
 | **B4** | `artefact_version` · H2 stale | `/task/h2-ack` · `/task/draft-edit` | **REAL** |
-| **B5** | Eval template + signer | `eval/CHECKLIST.md` | **TEMPLATE** (unsigned OK for design) |
+| **B5** | Eval template + signer | `eval/CHECKLIST.md` | **SIGNED** 2026-09-20 (agent smoke; DM co-sign optional) |
 | **B6** | G1 honesty | A3 / WP-18 | **DONE** |
 | **B7** | Fixture catalogue on disk | `FIXTURE_CATALOGUE.md` + FX-CODE-01 | **DONE** |
 

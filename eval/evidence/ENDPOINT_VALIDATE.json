@@ -1,0 +1,169 @@
+{
+  "ok": true,
+  "passed": 18,
+  "total": 18,
+  "api_base": "http://127.0.0.1:8080",
+  "primary_desk": "apps/kwb-app",
+  "rows": [
+    {
+      "name": "root",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "health",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/health",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "cards",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/cards",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "runtime",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/runtime/status",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "audit_recent",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/audit/recent?limit=5",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "mcp_status",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/mcp/status",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "task_start",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/task/start",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true
+    },
+    {
+      "name": "h1",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/task/h1-confirm",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "retrieve",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/task/retrieve",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "h7",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/task/h7-ack",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "inspect_draft",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/task/inspect-draft",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true
+    },
+    {
+      "name": "artifacts",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/artifacts/draft-f69510ec34.docx?grant_id=7fab1d576c564a87",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "h2",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/task/h2-ack",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "export",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/task/export",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "leave_pack",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/task/leave-pack?grant_id=7fab1d576c564a87&draft_filename=draft-f69510ec34.docx",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "g8_deny",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/gateway/chat",
+      "status": 403,
+      "expect": "4xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "g9_deny",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/task/export-check",
+      "status": 400,
+      "expect": "4xx",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "mon_a_start",
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/monitor-a/start",
+      "status": 200,
+      "expect": "2xx",
+      "ok": true,
+      "note": ""
+    }
+  ]
+}

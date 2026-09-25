@@ -71,7 +71,7 @@ def open_grant(
 ) -> Grant:
     init_db()
     gid = uuid.uuid4().hex[:16]
-    shelves = shelves or ["fixtures", "sop"]
+    shelves = shelves or ["fixtures", "sop", "knowledge", "kb"]
     tools = tools or ["retrieve", "gateway", "sandbox", "word"]
     now = datetime.now(timezone.utc).isoformat()
     with _lock:

@@ -1,0 +1,67 @@
+{
+  "ts": "2026-09-20T20:35:04Z",
+  "health_ok": true,
+  "inference": "LOCAL (this Laptop-B Ollama)",
+  "tasks": [
+    {
+      "task": "coding",
+      "chat_ok": true,
+      "route": {
+        "ok": true,
+        "task_type": "coding",
+        "card_id": "code-assist",
+        "model_id": "qwen2.5-coder:7b",
+        "card": {
+          "id": "code-assist",
+          "model_id": "qwen2.5-coder:7b",
+          "enabled": true,
+          "task_families": [
+            "coding"
+          ]
+        },
+        "g1_mode": "floor_single_tag_adopt"
+      },
+      "model": "qwen2.5-coder:7b",
+      "grant_id": "b8b91356d0e94622",
+      "sandbox": {
+        "ok": true,
+        "http": null,
+        "result": "22\n"
+      },
+      "model_distinct_from_inspect_hint": true,
+      "grade": "PASS"
+    },
+    {
+      "task": "inspection",
+      "files": [
+        "field_inspection_form_V101.pdf",
+        "scan_vessel_V101_field.png"
+      ],
+      "pdf_attach_ok": true,
+      "pdf_engine": "pypdf",
+      "grant_id": "81d66876b0f742a7",
+      "pdf_keys": [
+        "V-101",
+        "7.6"
+      ],
+      "img_attach_ok": true,
+      "img_engine": "fixture_stub",
+      "img_live_ocr": false,
+      "draft": "draft-f2480c2319.docx",
+      "route": {
+        "ok": true,
+        "task_type": "inspection",
+        "card_id": "inspect-draft",
+        "model_id": "llama3.2:3b"
+      },
+      "draft_ok": true,
+      "grade": "PASS"
+    }
+  ],
+  "summary": {
+    "pass": 2,
+    "partial": 0,
+    "fail": 0
+  },
+  "grants_isolated": true
+}

@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "ts": "2026-09-20T20:12:01.341456+00:00",
+    "base": "http://127.0.0.1:8080",
+    "open_high": 0,
+    "open_med": 0,
+    "findings_n": 24
+  },
+  "findings": [
+    {
+      "id": "A1",
+      "name": "public model gpt-4o",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'error': 'gateway_deny', 'reason': 'model_not_on_card', 'model': 'gpt-4o'}}"
+    },
+    {
+      "id": "A2",
+      "name": "public model claude",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'error': 'gateway_deny', 'reason': 'model_not_on_card', 'model': 'claude-3-opus'}}"
+    },
+    {
+      "id": "A3",
+      "name": "base_url override to openai ignored",
+      "expect": "safe",
+      "status": 0,
+      "blocked": true,
+      "severity": "info",
+      "detail": "st=200 base=http://127.0.0.1:11434"
+    },
+    {
+      "id": "B1",
+      "name": "fake grant retrieve",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'error': 'grant_not_found', 'grant_id': 'deadbeef'}}"
+    },
+    {
+      "id": "B2",
+      "name": "fake grant sandbox",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'error': 'grant_not_found', 'grant_id': '000000000000'}}"
+    },
+    {
+      "id": "B3",
+      "name": "revoked grant retrieve",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'error': 'grant_revoked', 'grant_id': '2e350b508fc04584'}}"
+    },
+    {
+      "id": "B4",
+      "name": "revoked grant orch",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'error': 'grant_inactive'}}"
+    },
+    {
+      "id": "C1-..%2F..%2F..",
+      "name": "path traversal ..%2F..%2F..%2Fwindows%2Fwin.ini",
+      "expect": "deny",
+      "status": 404,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': 'Not Found'}"
+    },
+    {
+      "id": "C1-../../../etc",
+      "name": "path traversal ../../../etc/passwd",
+      "expect": "deny",
+      "status": 404,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': 'Not Found'}"
+    },
+    {
+      "id": "C1-..\\..\\..\\win",
+      "name": "path traversal ..\\..\\..\\windows\\win.ini",
+      "expect": "deny",
+      "status": 400,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'error': 'unsupported_type', 'allowed': ['.docx', '.json', '.pptx'], 'filename': 'win.ini'}}"
+    },
+    {
+      "id": "C1-....//....//",
+      "name": "path traversal ....//....//....//windows/win.ini",
+      "expect": "deny",
+      "status": 404,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': 'Not Found'}"
+    },
+    {
+      "id": "C2",
+      "name": "artifact download without grant_id",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "file=draft-00ab78a660.docx st=403"
+    },
+    {
+      "id": "C3",
+      "name": "artifact wrong grant_id",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'error': 'grant_mismatch', 'filename': 'draft-00ab78a660.docx', 'grant_id': 'wronggrant'}}"
+    },
+    {
+      "id": "D1",
+      "name": "secret export-check",
+      "expect": "deny",
+      "status": 400,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'error': 'secret_in_draft', 'hits': ['password_like', 'aws_access_key_like']}}"
+    },
+    {
+      "id": "D2",
+      "name": "openai-like key export-check",
+      "expect": "deny",
+      "status": 400,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'error': 'secret_in_draft', 'hits': ['provider_sk_like']}}"
+    },
+    {
+      "id": "E1",
+      "name": "sandbox network to example.com denied",
+      "expect": "safe",
+      "status": 0,
+      "blocked": true,
+      "severity": "info",
+      "detail": "stdout=NET_DENY OSError\n network=host-process + socket/urlopen deny guard (not docker network=none)"
+    },
+    {
+      "id": "E2",
+      "name": "sandbox read win.ini blocked or empty",
+      "expect": "safe",
+      "status": 0,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'ok': True, 'mode': 'process', 'exit_code': 0, 'stdout': '', 'stderr': '', 'duration_ms': 113, 'timeout_occurred': Fals"
+    },
+    {
+      "id": "E3",
+      "name": "export after sandbox-red",
+      "expect": "deny",
+      "status": 404,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'error': 'draft_not_found', 'filename': 'nope.docx'}}"
+    },
+    {
+      "id": "F1",
+      "name": "invalid attach_b64",
+      "expect": "deny",
+      "status": 400,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'grant_id': '86998db7aec94ebf', 'task_id': 'be061613e9df', 'route': {'ok': True, 'task_type': 'inspection', 'card_id': 'inspect-draft', 'model_id': 'llama3.2:3b', 'card': {'id': 'inspect-draft', "
+    },
+    {
+      "id": "F2",
+      "name": "empty attach",
+      "expect": "deny",
+      "status": 400,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'ok': False, 'grant_id': '40339cec39b741f6', 'task_id': '57326f6d9746', 'route': {'ok': True, 'task_type': 'inspection', 'card_id': 'inspect-draft', 'model_id': 'llama3.2:3b', 'card': {'id': 'inspect-draft', "
+    },
+    {
+      "id": "G1",
+      "name": "export without H2",
+      "expect": "deny",
+      "status": 400,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'error': 'h2_required', 'message': 'Own-work H2 ack required before export leave'}}"
+    },
+    {
+      "id": "H1",
+      "name": "unknown MCP tool",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'error': 'grant_required', 'message': 'mcp/call requires grant_id'}}"
+    },
+    {
+      "id": "H2",
+      "name": "MCP call without grant_id",
+      "expect": "deny",
+      "status": 403,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'detail': {'error': 'grant_required', 'message': 'mcp/call requires grant_id'}}"
+    },
+    {
+      "id": "I1",
+      "name": "audit chain verifies",
+      "expect": "safe",
+      "status": 0,
+      "blocked": true,
+      "severity": "info",
+      "detail": "{'ok': True, 'entries': 2250, 'skipped_legacy': 0, 'tip': 'a0ce39f1ee2cb9cf87992"
+    }
+  ]
+}

@@ -1,17 +1,21 @@
 # KWB demo — Ollama is INFERENCE ONLY.
 # Policy (binding):
 #   - NEVER run `ollama pull` / registry download from this workbench or demo box.
-#   - Adopt ONLY models already present in the local Ollama store.
-#   - Adopted 2026-09-19 from `ollama list`: llama3.2:3b (chat).
-#   - nomic-embed-text is embed-only — not used for /v1 chat (not adopted for cards).
-#   - G1 honesty (WP-18 rev 1.1 / GATE_90 A3):
-#       Floor: ≥2 task→card routes; same model_id OK → label single-tag adopt.
-#       Full: ≥2 distinct model_ids only when a 2nd chat tag is staged offline.
-#       NEVER pull to satisfy G1. card_ids still differ (inspect vs code).
+#   - Adopt ONLY models already present in the local Ollama store (Laptop-A).
+#   - G1: ≥2 task→card routes with distinct model_ids when staged on A.
+#   - Multimodal: vision-scan → moondream (image/scan). Sequential load on 8GB VRAM.
 
 llm_base_url: "http://127.0.0.1:11434"
 bind_host: "127.0.0.1"
 bind_port: 8080
+
+# Phone hotspot two-laptop: do NOT edit this permanently.
+# On Laptop-B use: .\scripts\hotspot_link_workbench.ps1 -ServerIp <A-IP>
+# (sets SOVEREIGN_LLM_BASE_URL + SOVEREIGN_INFERENCE_ALLOW_HOSTS for that shell)
+
+# inference_allow_hosts:
+#   - "192.168.43.10"
+# station_token: "demo-station-2026"
 
 policy:
   runtime: ollama
@@ -19,9 +23,10 @@ policy:
   no_pull: true
   no_registry: true
   adopt: local_tags_only
-  adopted_at: "2026-09-19"
-  adopted_chat_tags: ["llama3.2:3b"]
-  not_adopted: ["nomic-embed-text:latest"]  # embed path only; not chat cards
+  adopted_at: "2026-09-20"
+  adopted_chat_tags: ["llama3.2:3b", "qwen2.5-coder:7b"]
+  adopted_vision_tags: ["moondream"]
+  not_adopted: ["nomic-embed-text:latest"]
 
 cards:
   - id: inspect-draft
@@ -29,9 +34,13 @@ cards:
     enabled: true
     task_families: [inspection]
   - id: code-assist
-    model_id: llama3.2:3b
+    model_id: qwen2.5-coder:7b
     enabled: true
     task_families: [coding]
+  - id: vision-scan
+    model_id: moondream
+    enabled: true
+    task_families: [vision, multimodal]
   - id: general-fallback
     model_id: llama3.2:3b
     enabled: true

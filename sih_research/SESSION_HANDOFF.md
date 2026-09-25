@@ -1,57 +1,71 @@
 # SIH26 Session Handoff (Mem0 mirror)
 
 **Mem0 user_id:** `cursor-local`  
-**Search first in new chat:** `SIH26 SESSION BOOTSTRAP`
+**Search first in new chat:** `SIH26 SESSION BOOTSTRAP` · also `SIH26 BUILD AUDIT BOARD`
 
 ## Role
 Assistant = Principal Solutions Architect + Principal Harness Engineer + Principal Research Engineer.  
-User = decision maker.
+User = decision maker. **Never lie. Use Mem0 for decisions / done / next / drift.**
 
 ## Project
 SIH26117 — Sovereign On-Premise Agentic AI Workbench (MRPL).  
 Workspace: `C:\Users\THARUN PARSA\Documents\SIH26`
 
-## Phase
-Research complete. Logical architecture **v1 locked** (`ARCHITECTURE_LOGICAL_v1.md`).  
-**Org→prototype design locked and red-team-patched** (`DESIGN_ORG_PROTOTYPE_v1.md` §10). Target = **official SIH portal PDF + portal-level prototype**. No college-round work. Stack still **not** locked. **No build** until user asks.
+## Phase (updated 2026-09-20)
+Build + eval + desk are **in progress / largely execute-ready** (GATE_90 claim execute ~0.90).  
+This handoff previously said “no build” — **that line is obsolete**. Prefer Mem0 `BUILD AUDIT BOARD` over stale paragraphs.
 
-## Binding MVP (Expected Solution)
+## Binding MVP (Expected Solution — official PS)
 1. Mid-GPU / small models OK  
 2. Multi-model auto-select ≥2 tasks  
-3. Inspection scan → Word approval note (agentic)  
+3. Inspection scan → **Word** approval note (agentic)  
 4. Sandbox coding verified  
 5. Multimodal OCR/vision  
 6. Visible zero-egress proof  
+
+## Honest status vs contract (2026-09-20)
+
+| Contract item | Status | Honesty note |
+|---|---|---|
+| ≥2 task auto-select | **Partial / floor** | Live demo often **one** adopted tag `llama3.2:3b` (G1 honesty) |
+| Scan → **Word** note | **Drift risk** | Working path drafts **PPTX**; Word path may still exist — do not claim PS Word if desk shows PPTX only |
+| Sandbox coding | **Present** | Eval / HITL gates; rehearse live |
+| Multimodal OCR | **Partial** | Framework (pypdf + Tesseract); **Tesseract not installed** → PNG fixture stub; **OCR model = org later** |
+| Zero-egress monitor | **Present** | Monitor A ≠ CERT — label correctly |
+| Orch spine | **Real** | `/orch/turn` · Pack → Gateway · 10-msg context |
+| Primary UI | **kwb-app Electron** | `kwb-desk` = legacy refuse |
 
 ## Demo topology (hardware FACT)
 - Runtime: RTX **4060 8 GB** (Laptop A)  
 - Workbench: RTX **3050 6 GB** (Laptop B, UI; GPU unused for LLM)  
 - Sequential 7B-class only; both Windows; Docker `--network=none` for **code** only.
 
+## Multimodal / OCR (DM 2026-09-20 evening)
+- **Target for demo claim:** multimodal/vision **model** via Gateway (same `/v1` contract)  
+- **Interim still wired:** pypdf + Tesseract framework / stub — do not claim vision model until a local multimodal tag is adopted and routed  
+- **Org:** may still keep framework as fallback under vision/OCR-model path
+
+## Mem0 discipline (user 2026-09-20)
+Long-context: decisions · working patterns · audit of done · remaining · next · outputs · logs · summaries.  
+Update after every meaningful block of work. Discuss drift vs PS before claiming PPT/demo lines.
+
+## DM locked 2026-09-20 evening
+1. **Word** = inspection Expected Solution deliverable (PPTX secondary/org-ext)  
+2. **Multimodal/vision model** for scan/image understanding (via Gateway, not side-door)  
+3. **Second local language model** for real ≥2-task auto-select  
+
+## Model call design (invariant — do not break)
+**Not** Workbench → LLM direct.  
+**Yes:** Desk → Orch → Pack → **Gateway** (grant · card · schema · loopback) → local `/v1` only (Ollama demo / vLLM org). Fail-closed if `/v1` down. No cloud fallback.
+
+## Simulation phases
+- **P0 DONE 2026-09-20:** single-model sim PASS → `eval/evidence/SINGLE_MODEL_SIM.json` · `backend/scripts/sim_single_model_e2e.py`
+- **P1 next:** offline-stage 2nd chat model (no venue pull)
+- **P2–P3:** two-laptop via reverse proxy — `solution/prototype/TWO_LAPTOP_REVERSE_PROXY_SIM.md` (A=Ollama server, B=workbench+proxy to 127.0.0.1:11434)
+
 ## Key docs
-- `sih_research/SYNTHESIS_v1_adversarial.md`
-- `sih_research/JUDGING_CRITERIA_INTAKE.md`
-- `sih_research/ADVERSARIAL_READINESS_CHECK.md`
-- `sih_research/sovereign-ai-workbench-kb/`
-- `sih_research/judging_sources/SIH2026_Guidelines.pdf`
-- `sih_research/ARCHITECTURE_LOGICAL_v1.md`
-- `sih_research/DESIGN_ORG_PROTOTYPE_v1.md`
-- `sih_research/DESIGN_REDTEAM_SKILLS_JUDGING_v1.md`
-- `sih_research/IDEA_AND_HARDWARE_LOCK_v1.md`
-
-- `sih_research/PLAYBOOK_KEEP_DROP_v1.md`
-- `sih_research/judging_sources/SIH_SOFTWARE_PLAYBOOK.md`
-
-- `sih_research/judging_sources/SIH2026-IDEA-Presentation-Format.pptx`
-- `sih_research/judging_sources/SIH2026_TEMPLATE_EXTRACT.md`
-- `sih_research/PPT_FILL_PACK_v2.md`  ← content source
-- `sih_research/chatgpt_slide_prompts/CHATGPT_6SLIDE_IMAGE_SPEC.md`  ← ChatGPT PNG grid + 6 prompts
-- `sih_research/chatgpt_slide_prompts/PROMPT_S2.txt` … `PROMPT_S6.txt` + `LAYOUT_S2.png` … `LAYOUT_S6.png`
-- `sih_research/PPT_FILL_KIT.md`  (v1 generic — superseded)
-- `sih_research/PPT_FILL_SPEC_v1.md`
-
-## Pending from user
-Fill official PPTX from PACK v2. Decide: product name, KPI A vs B, whether IndiaAI ₹ goes on slide 6. Placeholders OK until portal strings exist. Share draft for red-team. Prototype only when asked.
-
-## Next agenda
-Review their filled slides. Collect remaining: product name, nvidia-smi, public sample scan. No app code until build is requested.
+- `sih_research/sovereign-ai-workbench-kb/01-problem-context/01-problem-statement.md`
+- `solution/prototype/GATE_90_DISCUSS.md`
+- `solution/prototype/ORG_ARCHITECTURE_DIAGRAMS.md`
+- `eval/STAGE_RUNBOOK.md` · `eval/CHECKLIST.md`
+- `apps/kwb-app/` · `backend/app/orchestrator.py`

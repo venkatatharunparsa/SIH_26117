@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "task_type": "inspection",
+      "ok": true,
+      "card_id": "inspect-draft",
+      "model_id": "llama3.2:3b",
+      "card": {
+        "id": "inspect-draft",
+        "model_id": "llama3.2:3b",
+        "enabled": true,
+        "task_families": [
+          "inspection"
+        ]
+      },
+      "grant_id": "ac7d0f623e45472d"
+    },
+    {
+      "task_type": "coding",
+      "ok": true,
+      "card_id": "code-assist",
+      "model_id": "llama3.2:3b",
+      "card": {
+        "id": "code-assist",
+        "model_id": "llama3.2:3b",
+        "enabled": true,
+        "task_families": [
+          "coding"
+        ]
+      },
+      "grant_id": "cb1f939cffe045ce"
+    }
+  ],
+  "g1_mode": "floor_single_tag_adopt",
+  "distinct_cards": true
+}

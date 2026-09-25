@@ -196,12 +196,31 @@ def _audit_sandbox(label: str, result: SandboxResult) -> None:
 
 
 def _run_process_python(source: str, *, timeout: float, label: str) -> SandboxResult:
-    """Non-Docker process jail — cwd under workspace/sandbox; no Docker Desktop required."""
+    """Non-Docker process jail — cwd under workspace/sandbox; best-effort no-net guard."""
     run_id = uuid.uuid4().hex[:12]
     work = SANDBOX_DIR / run_id
     work.mkdir(parents=True, exist_ok=True)
     script = work / "job.py"
-    script.write_text(source, encoding="utf-8")
+    # Red-team E1: block outbound sockets in host-process jail (not a full container).
+    guard = (
+        "import socket as _socket\n"
+        "_orig_socket = _socket.socket\n"
+        "class _SandboxSocket(_orig_socket):\n"
+        "    def connect(self, address):\n"
+        "        raise OSError('sandbox_network_denied')\n"
+        "    def connect_ex(self, address):\n"
+        "        raise OSError('sandbox_network_denied')\n"
+        "_socket.socket = _SandboxSocket\n"
+        "try:\n"
+        "    import urllib.request as _ur\n"
+        "    def _blocked_urlopen(*a, **k):\n"
+        "        raise OSError('sandbox_network_denied')\n"
+        "    _ur.urlopen = _blocked_urlopen\n"
+        "except Exception:\n"
+        "    pass\n"
+        "\n"
+    )
+    script.write_text(guard + source, encoding="utf-8")
 
     cmd = [sys.executable, str(script)]
     t0 = time.perf_counter()
@@ -232,7 +251,7 @@ def _run_process_python(source: str, *, timeout: float, label: str) -> SandboxRe
         stderr=_truncate(stderr or ""),
         duration_ms=duration_ms,
         timeout_occurred=timeout_occurred,
-        network="host-process (no docker network; prefer offline)",
+        network="host-process + socket/urlopen deny guard (not docker network=none)",
         command=" ".join(cmd),
         work_dir=str(work),
     )

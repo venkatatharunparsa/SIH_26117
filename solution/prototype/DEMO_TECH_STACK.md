@@ -59,7 +59,7 @@
 | Gateway client | httpx → loopback `/v1` only; deny public URL | REAL | G8 |
 | Runtime | **Ollama** = **inference only** · `/v1` · **127.0.0.1** · adopt **local pre-staged tags only** · **NEVER pull** · G1 full only if 2nd chat tag staged offline | REAL | G1 |
 | Org runtime (not demo box) | **vLLM** on org GPU farm — same LocalModelClient contract | ORG | — |
-| PDF / OCR | pdfplumber/pypdf → Tesseract; **fixture fallback** | REAL (light) | G4 |
+| PDF / OCR | **Demo = framework:** pypdf + Tesseract (`pytesseract`); **fixture stub** if binary missing. **Org SoT = OCR model** (later; not day-1) | REAL (light) | G4 |
 | H1 / H2 / export leave / H9 | Same-user gates; `artefact_version` stale; H9+G10 on export; docx body secrets scan | REAL | G2,G3,G9,G10 |
 | Retrieve | Local SOP packs + grant filter + FTS5/BM25 k≤5 | MOCK data / REAL logic | G6 |
 | Verifier | Deterministic cite-or-abstain / NOT FOUND | REAL | G6 |

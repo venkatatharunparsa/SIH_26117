@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "ts": "2026-09-20T19:27:57.208942+00:00",
+    "base": "http://127.0.0.1:8080",
+    "inference": {
+      "mode": "lan_peer_laptop_a",
+      "label": "LAPTOP-A peer (10.45.226.121)",
+      "host": "10.45.226.121",
+      "runtime_reachable": true,
+      "tags": [
+        "moondream:latest",
+        "qwen2.5-coder:7b",
+        "llama3.2:3b"
+      ]
+    },
+    "wf1": {
+      "inspect": {
+        "ok": true,
+        "task_type": "inspection",
+        "card_id": "inspect-draft",
+        "model_id": "llama3.2:3b",
+        "card": {
+          "id": "inspect-draft",
+          "model_id": "llama3.2:3b",
+          "enabled": true,
+          "task_families": [
+            "inspection"
+          ]
+        },
+        "g1_mode": "floor_single_tag_adopt"
+      },
+      "coding": {
+        "ok": true,
+        "task_type": "coding",
+        "card_id": "code-assist",
+        "model_id": "qwen2.5-coder:7b",
+        "card": {
+          "id": "code-assist",
+          "model_id": "qwen2.5-coder:7b",
+          "enabled": true,
+          "task_families": [
+            "coding"
+          ]
+        },
+        "g1_mode": "full_two_tag"
+      },
+      "full_two_tag": true
+    },
+    "wf2_draft": "draft-5e9fe99d08.docx",
+    "wf4": {
+      "vision": true,
+      "prompt_head": "Confirm extract before we treat it as input. Source: on-device vision model (moondream) via Gateway. Enter to accept, or paste a corrected extract."
+    },
+    "summary": {
+      "passed": 24,
+      "total": 24,
+      "ok": true
+    }
+  },
+  "results": [
+    {
+      "wf": "WF0",
+      "name": "health",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "wf": "WF0",
+      "name": "inference_status",
+      "ok": true,
+      "detail": "{'ok': True, 'llm_base_url': 'http://10.45.226.121:11434', 'host': '10.45.226.121', 'mode': 'lan_peer_laptop_a', 'label'"
+    },
+    {
+      "wf": "WF0",
+      "name": "runtime_reachable",
+      "ok": true,
+      "detail": "LAPTOP-A peer (10.45.226.121)"
+    },
+    {
+      "wf": "WF1",
+      "name": "start_inspection",
+      "ok": true,
+      "detail": "inspect-draft"
+    },
+    {
+      "wf": "WF1",
+      "name": "start_coding",
+      "ok": true,
+      "detail": "code-assist"
+    },
+    {
+      "wf": "WF1",
+      "name": "two_distinct_cards",
+      "ok": true,
+      "detail": "inspect-draft vs code-assist"
+    },
+    {
+      "wf": "WF1",
+      "name": "two_distinct_models",
+      "ok": true,
+      "detail": "llama3.2:3b vs qwen2.5-coder:7b"
+    },
+    {
+      "wf": "WF2",
+      "name": "orch_attach",
+      "ok": true,
+      "detail": "phase=await_confirm_extract"
+    },
+    {
+      "wf": "WF2",
+      "name": "confirm_extract",
+      "ok": true,
+      "detail": "phase=await_review_cites"
+    },
+    {
+      "wf": "WF2",
+      "name": "word_draft",
+      "ok": true,
+      "detail": "file=draft-5e9fe99d08.docx phase=await_self_check"
+    },
+    {
+      "wf": "WF2",
+      "name": "self_check",
+      "ok": true,
+      "detail": "phase=await_export"
+    },
+    {
+      "wf": "WF2",
+      "name": "export_leave",
+      "ok": true,
+      "detail": "phase=done"
+    },
+    {
+      "wf": "WF3",
+      "name": "sandbox_calc",
+      "ok": true,
+      "detail": "{'ok': True, 'mode': 'process', 'exit_code': 0, 'stdout': '0.40000000000000036\\n', 'stderr': '', 'du"
+    },
+    {
+      "wf": "WF3",
+      "name": "h9_ack",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "wf": "WF3",
+      "name": "sandbox_red_or_export_gate",
+      "ok": true,
+      "detail": "red=200 export=422"
+    },
+    {
+      "wf": "WF4",
+      "name": "image_attach",
+      "ok": true,
+      "detail": "vision=True stub_or_ocr=True"
+    },
+    {
+      "wf": "WF4",
+      "name": "multimodal_engine_honest",
+      "ok": true,
+      "detail": "Confirm extract before we treat it as input. Source: on-device vision model (moondream) via Gateway. Enter to accept, or paste a corrected extract."
+    },
+    {
+      "wf": "WF5",
+      "name": "monitor_a_start",
+      "ok": true,
+      "detail": "1c6b6911e0d9"
+    },
+    {
+      "wf": "WF5",
+      "name": "monitor_a_stop",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "wf": "WF5",
+      "name": "audit_verify",
+      "ok": true,
+      "detail": "{'ok': True, 'entries': 1853, 'skipped_legacy': 0, 'tip': '6cb3d15970070391a669b"
+    },
+    {
+      "wf": "WF5",
+      "name": "g8_deny_public_model",
+      "ok": true,
+      "detail": "403"
+    },
+    {
+      "wf": "WF5",
+      "name": "gateway_host_ok",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "wf": "FC",
+      "name": "g9_secret_deny",
+      "ok": true,
+      "detail": "400"
+    },
+    {
+      "wf": "FC",
+      "name": "g7_revoke_blocks",
+      "ok": true,
+      "detail": "403"
+    }
+  ]
+}

@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Vite/Electron: script-src must allow module + HMR eval or the window stays blank -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' http://127.0.0.1:8080 http://localhost:8080 ws://127.0.0.1:5173 ws://localhost:5173; img-src 'self' data:;"
+      content="default-src 'self' http://127.0.0.1:5173 http://localhost:5173; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://127.0.0.1:5173 http://localhost:5173; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' http://127.0.0.1:5173 http://localhost:5173 ws://127.0.0.1:5173 ws://localhost:5173 http://127.0.0.1:8080 http://localhost:8080; img-src 'self' data: blob:; frame-src 'self' data: blob:; object-src 'self' data: blob:;"
     />
     <title>Knowledge Work Bench</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

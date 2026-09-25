@@ -27,7 +27,7 @@
 | Windows Sandbox as **optional** only | Sound | Must not become new Desktop-class dependency | **PASS if optional**; **FAIL if required** |
 | Audit: **SQLite transactional store + JSONL export + hash chain** | Sound | WP-17: append-only evidence, fail-closed, reconstructible — **storage brand not locked** | **PASS — candidate** (better than JSONL-only for concurrent UI) |
 | Grants/session SQLite + revoke-before-tool | Sound | WP-04 G7 | **PASS — candidate** |
-| Tesseract + fixture; add **PDF text extract before OCR** | Sound **with WP-03 caveat** | WP-03 S1 parse; for **untrusted digital PDF** freeze prefers **rasterize→OCR** over blind trust of hidden text layer | **PASS as pipeline:** detect type → if digital text: extract **and** label trust; if scan/empty: OCR; never skip H1 |
+| **Demo:** Tesseract framework + fixture; PDF text before OCR. **Org SoT:** OCR model (vision/neural) later | Sound **with WP-03 caveat** | WP-03 S1 parse; for **untrusted digital PDF** freeze prefers **rasterize→OCR** over blind trust of hidden text layer; org upgrades engine without skipping H1 | **PASS as pipeline:** detect type → if digital text: extract **and** label trust; if scan/empty: **demo** Tesseract / **org** OCR model; never skip H1 |
 | **PyMuPDF** named | **CAVEAT — license** | Research: PyMuPDF often **AGPL-3.0** (or commercial). SIH/org may refuse AGPL embed | **NOT free ultimate** — prefer **MIT pdfplumber** and/or **pypdf** + rasterize; PyMuPDF only if DM accepts AGPL/commercial |
 | pdfplumber | Sound for tables/MIT | Complements OCR path | **PASS — preferred PDF text candidate** |
 | Lexical FTS5/BM25 k≤5 + grant-first + deterministic reranker (no vector yet) | Sound | WP-11 lexical must-work; k=5; authz-first | **PASS — candidate enhancement** |
@@ -62,11 +62,13 @@ Do **not** silently trust PDF text layer (WP-03).
 ```text
 PDF in → classify page
   ├─ selectable text → extract + trust_label=machine_extract (still H1)
-  ├─ image/scan/empty → rasterize → Tesseract (+ fixture fallback)
+  ├─ image/scan/empty → rasterize → OCR engine (+ fixture fallback)
+  │     demo: Tesseract (pytesseract) framework
+  │     org SoT: OCR model (vision/neural); framework optional fallback
   └─ encrypted / embeds → fail-closed
 ```
 
-**Library:** prefer **pdfplumber (MIT)** and/or pypdf for text; **do not lock PyMuPDF** until AGPL accepted.
+**Library (demo):** prefer **pdfplumber (MIT)** and/or pypdf for text; Tesseract for images. **Org:** OCR model pluggable later. **Do not lock PyMuPDF** until AGPL accepted.
 
 ---
 
@@ -88,7 +90,7 @@ Python 3.11 or 3.12 (pinned)
 FastAPI + Uvicorn @ 127.0.0.1 (blocking work in threads)
 UI: Claude-like task desk — React+Vite OR lighter SSR/HTML if faster (layout locked, brand open)
 docxtpl + python-docx
-PDF: text extract (pdfplumber/pypdf preferred) → OCR Tesseract + fixture; H1 always
+PDF: text extract (pdfplumber/pypdf preferred) → **demo OCR framework** Tesseract + fixture; **org SoT** OCR model later; H1 always
 Audit: SQLite events + JSONL export + hash chain + manifest
 State: SQLite sessions/grants (revoke before tools)
 Retrieve: grant → FTS5/BM25 → deterministic boosts → k≤5

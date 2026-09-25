@@ -1,0 +1,72 @@
+{
+  "mode": "single_model_simulation",
+  "g1": "floor_single_tag_adopt",
+  "steps": [
+    {
+      "name": "route_inspection",
+      "status": 200,
+      "card_id": "inspect-draft",
+      "model_id": "llama3.2:3b",
+      "g1_mode": "floor_single_tag_adopt",
+      "ok": true
+    },
+    {
+      "name": "route_coding",
+      "status": 200,
+      "card_id": "code-assist",
+      "model_id": "qwen2.5-coder:7b",
+      "g1_mode": "full_two_tag",
+      "ok": true
+    },
+    {
+      "name": "station_link",
+      "ok": true,
+      "code": 0
+    },
+    {
+      "name": "platform",
+      "ok": true,
+      "code": 0
+    },
+    {
+      "name": "file_read",
+      "ok": true,
+      "code": 0
+    },
+    {
+      "name": "chat_history",
+      "ok": true,
+      "code": 0
+    },
+    {
+      "name": "ocr",
+      "ok": true,
+      "code": 0
+    },
+    {
+      "name": "word",
+      "ok": true,
+      "code": 0
+    }
+  ],
+  "health": {
+    "ok": true,
+    "llm_base_url": "http://10.45.226.121:11434",
+    "ocr": {
+      "tesseract": false,
+      "pypdf": true,
+      "pillow": true,
+      "pdf2image": false,
+      "fixture_image": true,
+      "fixture_pdf": true,
+      "fixture_root": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\data\\fixtures",
+      "repo_root": "C:\\Users\\THARUN PARSA\\Documents\\SIH26"
+    },
+    "adopted": [
+      "llama3.2:3b",
+      "qwen2.5-coder:7b"
+    ]
+  },
+  "failed": [],
+  "pass": true
+}

@@ -18,7 +18,7 @@ Python 3.11 or 3.12 (pinned)
 FastAPI + Uvicorn @ 127.0.0.1 (blocking OCR/docx/subprocess in threads)
 UI: Claude-like task desk — React+Vite preferred; layout locked, toolkit reopenable
 docxtpl + python-docx (+ LibreOffice PDF optional later)
-PDF: pdfplumber/pypdf text path → Tesseract OCR + fixture; H1 always; no AGPL PyMuPDF unless licensed
+PDF / OCR (split locked 2026-09-20): **demo** = OCR *framework* (pypdf text + Tesseract/pytesseract + honest fixture stub); **org SoT** = OCR *model* (vision/neural OCR) — framework optional fallback later; H1 always; no AGPL PyMuPDF unless licensed
 Audit: SQLite transactional events + JSONL export + hash chain + manifest
 State: SQLite sessions / grants / metadata (revoke before every tool)
 Retrieve: grant-filter → FTS5/BM25 → deterministic boosts → k≤5
@@ -53,7 +53,7 @@ Answer format: **ENOUGH** | **ENOUGH + add module** | **GAP (must extend stack)*
 | Word DRAFT + templates | **ENOUGH** | Template governance | Org template shelf + Admin UX |
 | Excel / PPT / calc-with-steps | **DEFERRED artefact** | Not in baseline libs | openpyxl / PPT eng **when promoted** |
 | Sandbox code + calc | **ENOUGH for demo honesty** | Best-effort ≠ hostile multi-tenant | Org: stronger isolation menu (Podman/gVisor/Firecracker **ambition**) |
-| OCR + vision multimodal | **ENOUGH skeleton** | Tesseract weak on handwriting/drawings | Pluggable OCR/VLM cards; Paddle/VLM on org GPU |
+| OCR + vision multimodal | **ENOUGH demo skeleton; GAP quality for org** | Framework (Tesseract) weak on handwriting/drawings | **Org SoT: OCR model** (vision/neural); keep framework as optional fallback; VLM cards on org GPU |
 | KB connector + three-level cites | **ENOUGH spine** | FTS5 alone fails at **large** corpus / semantic paraphrase | Org: hybrid retrieve + connector adapters (read-only EAM/DMS schemas); **not** Chroma-as-SoR |
 | Cite-or-abstain | **ENOUGH** | Must stay deterministic at org | Scale tests; contradiction UI (WP-22) |
 | Grants + revoke + classifier | **ENOUGH spine** | SQLite single-node | Org IdP/SSO; multi-node grant service; classifier policy engine |
@@ -72,7 +72,7 @@ Answer format: **ENOUGH** | **ENOUGH + add module** | **GAP (must extend stack)*
 | Separate gateway process | **GAP for org must** | Demo may in-process | Org: gateway as **own process** (WP-09 D1) |
 | GPU-only org inference | **OUTSIDE / runtime plane** | Workbench OK | Org runtime plane (WP-10) |
 | SSO / plant IdP | **GAP** | MOCK users only | Integrate IdP later; session≠grant stays |
-| Drawing review / handwritten | **GAP quality** | Tesseract insufficient | VLM cards + specialised skills |
+| Drawing review / handwritten | **GAP quality** | Framework OCR insufficient | **OCR model** + VLM cards + specialised skills |
 | Secret/PII at org scale | **ENOUGH + harden** | Regex incomplete | Policy packs; optional Presidio; DLP ambition |
 | Air-gap claim honesty | **ENOUGH** | Overclaim kills trust | Keep best-effort language |
 
@@ -119,6 +119,16 @@ Answer format: **ENOUGH** | **ENOUGH + add module** | **GAP (must extend stack)*
 9. Excel/PPT/calc when Description promoted  
 10. SSO/IdP adapter  
 11. Optional Postgres if multi-node proven necessary  
+12. **OCR model** (vision/neural) for production ingest — demo stays on Tesseract/pypdf framework  
+
+---
+
+## 4b. OCR decision (DM 2026-09-20) — demo vs org
+
+| Scale | Path | Honest label |
+|---|---|---|
+| **Now / demo (day-1)** | **OCR framework** already wired: **Tesseract (`pytesseract`) + pypdf** (+ fixture stub if Tesseract missing) | Live framework OCR when binary present; stub ≠ live OCR |
+| **Organisation (target / SoT)** | **OCR model** (vision / neural OCR) for production-oriented org design | Do **not** ship model in demo; combine later with framework as **optional fallback** |
 
 ---
 

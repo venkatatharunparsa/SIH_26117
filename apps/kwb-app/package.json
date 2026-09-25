@@ -9,9 +9,11 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 5173",
     "electron": "electron .",
-    "electron:dev": "node scripts/electron-dev.mjs"
+    "electron:dev": "node scripts/electron-dev.mjs",
+    "electron:prod": "npm run build && cross-env KWB_ELECTRON_DEV=0 electron ."
   },
   "dependencies": {
+    "lucide-react": "^0.544.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

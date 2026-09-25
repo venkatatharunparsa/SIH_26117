@@ -1,12 +1,13 @@
 {
   "name": "kwb-desk",
   "version": "0.1.0",
-  "private": true,
+  "description": "REJECTED/LEGACY — use apps/kwb-app Electron desk. See LEGACY.md.",
   "scripts": {
-    "dev": "next dev -H 127.0.0.1 -p 3000",
-    "build": "next build",
-    "start": "next start -H 127.0.0.1 -p 3000",
-    "lint": "eslint"
+    "dev": "node scripts/refuse-legacy.cjs",
+    "build": "node scripts/refuse-legacy.cjs",
+    "start": "node scripts/refuse-legacy.cjs",
+    "lint": "node scripts/refuse-legacy.cjs",
+    "legacy:force-dev": "next dev -H 127.0.0.1 -p 3000"
   },
   "dependencies": {
     "react": "19.1.0",

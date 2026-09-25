@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "cites": [
+    {
+      "path": "fixtures\\extract_vessel_h1.md",
+      "score": 2,
+      "snippet": "# Confidential synthetic \u2014 SIH demo only. Not real plant SoR.",
+      "label": "Confidential synthetic"
+    },
+    {
+      "path": "fixtures\\sop_thickness.txt",
+      "score": 2,
+      "snippet": "# Confidential synthetic \u2014 SIH demo only. Not real plant SoR.",
+      "label": "Confidential synthetic"
+    },
+    {
+      "path": "fixtures\\scan_vessel_stub.txt",
+      "score": 1,
+      "snippet": "# Confidential synthetic \u2014 SIH demo only. Not real plant SoR.",
+      "label": "Confidential synthetic"
+    },
+    {
+      "path": "fixtures\\tpl_inspection_note.md",
+      "score": 1,
+      "snippet": "# Confidential synthetic \u2014 SIH demo only. Not real plant SoR.",
+      "label": "Confidential synthetic"
+    }
+  ],
+  "verdict": "cites",
+  "k": 5
+}

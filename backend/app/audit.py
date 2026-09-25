@@ -57,6 +57,13 @@ def subscribe(callback) -> None:
     _subscribers.append(callback)
 
 
+def unsubscribe(callback) -> None:
+    try:
+        _subscribers.remove(callback)
+    except ValueError:
+        pass
+
+
 def log_event(kind: str, **payload: Any) -> dict:
     with _lock:
         ensure_dirs()

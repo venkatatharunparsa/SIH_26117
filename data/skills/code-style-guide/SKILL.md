@@ -1,8 +1,8 @@
 ---
 name: code-style-guide
 description: >
-  Project coding standards and style guidelines for Knowledge Work Bench.
-  Offline skills pack placeholder — progressive load later (not wired to a runner).
+  Coding task skill — sandbox a calculation or snippet, show steps, then ask the operator to accept.
+task_families: [coding]
 license: MIT
 ---
 
@@ -32,6 +32,13 @@ This pack is **offline documentation** until a skill runner is designed.
 - All public functions must have docstrings
 - Use Google-style docstrings
 - Include type information in docstrings when not using type hints
+
+## Agent steps
+
+- read_request | Read the coding request | Route to the coding model card
+- sandbox | Run it in the sandbox | Calc or Python; host-process, not plant control
+- observe | Show the steps | Stdout stays in the stream
+- accept | Accept the observation | Operator judgement (H9); no plant write
 
 ## KWB product constraints
 

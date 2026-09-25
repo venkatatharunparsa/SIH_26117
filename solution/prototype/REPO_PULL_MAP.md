@@ -40,7 +40,7 @@
 | Local `/v1` client triad | G1,G8 | **Continue** / OpenHands client pattern | Study; write thin `httpx` client | Card check, grant_id, deny WAN |
 | Runtime serve | G1 | **Ollama** *or* **llama.cpp** server | Install binary (not fork into app) | Model Cards; sequential load |
 | Word DRAFT | G2 | **python-docx** (PyPI) | `pip` | Templates + DRAFT badge + HITL |
-| OCR | G4 | **Tesseract** + `pytesseract` | System + pip | H1 gate; fail closed |
+| OCR | G4 | **Demo framework:** **Tesseract** + `pytesseract` (+ pypdf). **Org SoT:** OCR model (later) | System + pip | H1 gate; fail closed; fixture stub if binary missing |
 | Sandbox ≠ GPU | G3,G10 | **OpenHands** jail idea; Docker/`network=none` or process jail | Study OpenHands sandbox docs; implement thin runner | de-Docker; calc-in-jail; H9 |
 | MCP host (MOCK later) | — | **MCP Python SDK** + **FastMCP** | Clone SDK; write one local server | Allowlist; egress deny |
 | Secret/PII gate | G9 | **Presidio** (idea + pip) | `pip` analyzer or light regex first | Bind to export gates |

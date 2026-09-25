@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "path": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\artifacts\\monitor-a-4ddadc70a79a.json",
+  "pack": {
+    "session_id": "4ddadc70a79a",
+    "start": {
+      "label": "start",
+      "ts": "2026-09-20T07:26:43.903898+00:00",
+      "scope": [
+        "workbench",
+        "ollama_loopback"
+      ],
+      "claim": "default-deny intent; evidence artefact \u2014 not CERT / not accreditation",
+      "local_probes": [
+        {
+          "host": "127.0.0.1",
+          "port": 8080,
+          "connect_ex": 0,
+          "local_ok": true
+        },
+        {
+          "host": "127.0.0.1",
+          "port": 11434,
+          "connect_ex": 0,
+          "local_ok": true
+        }
+      ],
+      "note": "Demo Monitor A = start/stop loopback snapshot on workbench+Ollama. Evidence artefact \u2014 not CERT. Not OS/firewall WAN forensics (add host capture in jury runbook for full WP-13 D1)."
+    },
+    "stop": {
+      "label": "stop",
+      "ts": "2026-09-20T07:26:44.304435+00:00",
+      "scope": [
+        "workbench",
+        "ollama_loopback"
+      ],
+      "claim": "default-deny intent; evidence artefact \u2014 not CERT / not accreditation",
+      "local_probes": [
+        {
+          "host": "127.0.0.1",
+          "port": 8080,
+          "connect_ex": 0,
+          "local_ok": true
+        },
+        {
+          "host": "127.0.0.1",
+          "port": 11434,
+          "connect_ex": 0,
+          "local_ok": true
+        }
+      ],
+      "note": "Demo Monitor A = start/stop loopback snapshot on workbench+Ollama. Evidence artefact \u2014 not CERT. Not OS/firewall WAN forensics (add host capture in jury runbook for full WP-13 D1)."
+    },
+    "not_cert": true,
+    "sha256": "c86b3c3752a10c9aed17edeb5b3cf4beb313ec82b25c8447f35e055b9a63f123"
+  }
+}

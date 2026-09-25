@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "path": "C:\\Users\\THARUN PARSA\\Documents\\SIH26\\workspace\\artifacts\\draft-dad045cb33.docx",
+  "filename": "draft-dad045cb33.docx",
+  "status": "DRAFT",
+  "artefact_version": "96756606ebf791ac",
+  "cite_verdict": "cites",
+  "cites": [
+    "fixtures\\extract_vessel_h1.md: # Confidential synthetic \u2014 SIH demo only. Not real plant SoR.",
+    "fixtures\\sop_thickness.txt: # Confidential synthetic \u2014 SIH demo only. Not real plant SoR.",
+    "fixtures\\scan_vessel_stub.txt: # Confidential synthetic \u2014 SIH demo only. Not real plant SoR.",
+    "fixtures\\tpl_inspection_note.md: # Confidential synthetic \u2014 SIH demo only. Not real plant SoR."
+  ]
+}

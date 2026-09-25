@@ -12,8 +12,8 @@ Research: [`../../solution/prototype/UI_CLAUDE_CODE_ADV.md`](../../solution/prot
 | Region | Role |
 |---|---|
 | Left | Sessions / tasks list |
-| Center | Action stream (tool blocks) + composer |
-| Right | Monitor B — grant, card, model, denies, audit, leave downloads |
+| Center | Attach (text/doc/fixture) · action stream · composer |
+| Right | **Monitor B on demand** — click titlebar **Monitor B** (closed by default) |
 
 ## Prerequisites
 
@@ -44,18 +44,13 @@ npm run dev
 
 ## Inspection path (against API)
 
-In the composer action row:
+1. Attach: paste text · choose document (`.txt`/`.md`/`.png`/`.jpg`/`.pdf`) · or load fixture (FX-*)  
+2. Orchestrator extract → **Confirm extract** (H1) — Enter to accept  
+3. Cite review → PPTX DRAFT → self-check → export leave  
 
-1. `task/start` → grant + card/model in Monitor B  
-2. `load FX-EXT-01` → fixture extract  
-3. `h1-confirm` → same-user extract ack  
-4. `retrieve` → cite-or-abstain  
-5. `h7-ack` → cite review  
-6. `inspect-draft` → Word **DRAFT** (badge in title bar)  
-7. `h2-ack` → self-check  
-8. `export leave` → soft copy; download DRAFT / leave pack from Monitor B  
+Binary attaches go through `/orch/turn` with `attach_b64` (pypdf text PDF · Tesseract image OCR · honest fixture stub if Tesseract missing). See `data/fixtures/README_attach_demo.md` for Windows Tesseract install.
 
-Integrity: **DRAFT** badge · **not CERT** · no Approver · export leave only.
+Integrity: **DRAFT** badge · **not CERT** · no Approver · export leave only · Monitor on demand.
 
 ## Packaging
 
